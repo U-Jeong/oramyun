@@ -1,0 +1,1535 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- Mirrored from oramyun.com/main.do?pgMode=show_pkg by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 10 Dec 2021 03:50:59 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<!-- seo -->
+<meta name="title" content="먹고 싶은 라면만 골라요! 오늘의라면">
+<meta name="keywords" content="오늘의라면, 오늘의 라면, 오라면, oramyun, 라면, 구독서비스, 봉지라면, 라면구독, 정기구독, 구독, 누들, 한국라면">
+<meta name="description" content="간편한 한 끼, 이젠 라면도 무료로 정기배송 받으세요! 스테디셀러 패키지부터 비건을 위한 프레시 패키지까지!">
+<meta property="og:url" content="./resources/oramyun/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="먹고 싶은 라면만 골라요! 오늘의라면">
+<meta property="og:description" content="간편한 한 끼, 이젠 라면도 무료로 정기배송 받으세요! 스테디셀러 패키지부터 비건을 위한 프레시 패키지까지!">
+<meta property="og:image" content="./resources/oramyun/portal/img/og-img.png">
+<link rel="canonical" href="index.html">
+<!-- google site verification -->
+<meta name="google-site-verification" content="Ps6Bw_nGxbdmvNb-Bfzd45KeRjmnBfM8J6kxWMraGdo" />
+<!-- naver site verification -->
+<meta name="naver-site-verification" content="7a1bdc9713f718f74860e0bc66dcfee3ad2dfe95" />
+<!-- title -->
+<title>오늘의 라면 | Oramyun</title>
+<!-- favicon , color -->
+<link rel="icon" type="image/png" sizes="16x16" href="./resources/oramyun/portal/img/layout/ico_favicon_16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./resources/oramyun/portal/img/layout/ico_favicon_32.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
+
+<!-- 공통 css -->
+<link rel="stylesheet" media="all" href="./resources/oramyun/portal/cmmCss/cmm-importd5f7.css?ver=2.0"/>
+<link rel="stylesheet" media="all" href="./resources/oramyun/portal/cmmCss/swiper.css"/>
+
+<!-- 공통 js -->
+<script type="text/javascript" src="./resources/oramyun/portal/cmmJs/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="./resources/oramyun/portal/cmmJs/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="./resources/oramyun/portal/cmmJs/swiper.min.js"></script>
+<script type="text/javascript" src="./resources/oramyun/portal/cmmJs/lazyload.min.js"></script>
+<script src="./resources/code.jquery.com/jquery-1.12.4.js"></script>
+
+<!-- 홈페이지 전용 css -->
+<link rel="stylesheet" media="all" href="./resources/oramyun/portal/css/importd5f7.css?ver=2.0"/>
+
+<!-- datepicker -->
+<link rel="stylesheet" media="all" href="./resources/oramyun/portal/cmmCss/datepicker_style.css"/>
+<script src="./resources/ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="./resources/code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
+
+<!-- CDN -->
+<link href="./resources/unpkg.com/aos%402.3.1/dist/aos.css" rel="stylesheet">
+
+<!-- 카카오 -->
+<script src="./resources/developers.kakao.com/sdk/js/kakao.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5Z5JCW91BK"></script>
+<script>
+	// Google Analytics
+ 	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+// 	gtag('config', 'G-5Z5JCW91BK');	// 구글 애널리틱스만
+	gtag('config', 'AW-797402448'); // 구글 애널리틱스 + 구글 애즈
+  
+	// 카카오
+	Kakao.init('f5738744c375284af132c6e74392dfa4');
+	
+	//숫자만 입력	
+	function onlyNum(obj){
+		obj.value = obj.value.replace(/[^0-9]/g,"");
+	}
+	
+	function setComma(value) {
+	    return String(value).replace(/(\d)(?=(?:\d{3})+(?!\d))/g, '$1,');
+	}
+	
+	function unsetComma(value) {
+	    return String(value).replace(/[^\d]+/g, '');
+	}
+</script>
+
+</head>
+<body>
+<!-- skipNavigation:S -->
+
+<div id="skipNavi">
+	<h1 class="blind">스킵네비게이션</h1>
+	<ul>
+		<li><a href="#container" class="skipLink">본문바로가기</a></li>
+		<li><a href="#gnb" class="skipLink">주메뉴바로가기</a></li>
+	</ul>
+</div>
+<!-- skipNavigation:E -->
+<div id="wrap">
+<!-- header:S -->
+
+
+
+<script type="text/javascript">
+//쿠키가져오기
+function getCookie(cName){
+	cName = cName + '=';
+	var cookieData = document.cookie;
+	var start = cookieData.indexOf(cName);
+	var cValue = '';
+	if(start != -1){
+		start += cName.length;
+		var end = cookieData.indexOf(';', start);
+		if(end == -1)end = cookieData.length;
+		cValue = cookieData.substring(start, end);
+	}
+	return unescape(cValue);
+}
+
+function setCookie( name, value, expiredays ) {
+	var todayDate = new Date();
+	todayDate.setDate( todayDate.getDate() + expiredays );
+	document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+}
+
+function closeWin(pid) { 	
+	setCookie(pid, "done" , 1); //1은 하루동안 쿠키보관, 테스트시 팝업을 새로 열려면 -5로 설정	
+}
+
+</script>
+
+
+	<!-- event-popzone -->
+	<div id="event-popzone"  style="display:none;">
+		
+	</div>
+
+
+
+	<!-- kakao-floating -->
+	<div id="kakao-floating">
+		<a href="#n" class="floating-btn" title="1:1 문의" onclick="javascript:chatChannel();">
+			<span>1:1 문의</span>
+		</a>
+	</div>
+
+<script type="text/javascript">
+	function chatChannel() {
+		Kakao.Channel.chat({
+			channelPublicId: '_vFxiFs',
+		})
+	}
+
+	function addChannel() {
+		Kakao.Channel.addChannel({
+			channelPublicId: '_vFxiFs',
+		})
+	}
+</script>
+
+
+<script>
+//로딩화면 보이기
+function maskShow(){
+	var height = $(document).scrollTop();
+	$('#menuLoading-mask').css('height', document.body.scrollHeight);
+	$('#menuLoading-mask').show();
+}
+//로딩화면 숨기기
+function maskHide(){
+	$('#menuLoading-mask').hide();
+}
+</script>
+<div id="menuLoading-mask"><div id="menuLoading-img"></div></div>
+    
+<!--// page start -->
+
+<!-- header -->
+<jsp:include page="/WEB-INF/views/inc/header_o.jsp"></jsp:include>
+
+<!-- container:S -->
+<div id="container-wrap">
+	<div id="m-container">
+	
+		<!-- intro - head section -->
+		<section id="intro01" class="head_section intro01">
+			<div class="inwrap">
+				<div class="head_tit_box" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-delay="300">
+					<h2 class="head-btit">이젠, <span class="c-point01">라면</span>도<br> 편하게 <span class="c-point01">구독</span>하세요!</h2>
+				</div>
+				<a href="#intro02" class="head-cont-btn" title="자세히보기">자세히보기</a>
+			</div>			
+		</section>
+		
+		<section id="intro02" class="intro02">
+			<div class="inwrap">
+				<div class="intro_txt_box" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-delay="300">
+					<h5 class="intro-txt">마트에서 한 묶음 씩 사기는 망설여지고,<br>
+					편의점엔 원하는 라면이 없어 실망했던<br>여러분들을 위해 <span class="c-point01">오늘의 라면</span>이 탄생했습니다.<br>
+					<br>
+					먹고 싶은 라면만, 먹을 만큼 골라<br>
+					<span class="c-point01">간편하게 정기배송</span> 받으세요!</h5>
+					<a href="./resources/oramyun/share/view1d70.html?no=23" class="btn subsbtn" title="구독하기">구독하기</a>
+				</div>
+			</div>
+		</section>
+		
+		<section id="intro03" class="intro03">
+			<div class="inwrap">
+				<div class="intro_slide swiper-container">
+					<div class="swiper-wrapper">
+						<div class="intro-item swiper-slide">
+							<a href="#n" class="item-box bg01"></a>
+						</div>
+						<div class="intro-item swiper-slide">
+							<a href="./resources/oramyun/share/view353d.html?pgMode=&amp;pageIndex=1&amp;nowUrl=%2Fview.do%3Fno%3D42&amp;no=42&amp;idx=106&amp;view=view&amp;sv2=ING" class="item-box bg02"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section id="intro04" class="intro04">
+			<script>
+				// pkg-slide
+				$(function(){			
+					var pkg_slide_num = "5"*1;			
+					var pkg_slide_pc = {
+						slidesPerView : 3 ,
+						spaceBetween: 40,
+						touchReleaseOnEdges : true,
+						navigation: {
+					          nextEl: ".pkg-btn-next",
+					          prevEl: ".pkg-btn-prev",
+					    },
+						pagination: {
+					          el: ".pkg-pagination",
+					          clickable: true,
+					    },
+					    breakpoints : {
+					    	1280 : {
+								slidesPerView : 2 ,
+								spaceBetween: 20,
+								touchReleaseOnEdges : false,
+								centeredSlides : true,
+							},		
+					    	1080 : {
+								slidesPerView : 1.5 ,
+								spaceBetween: 20,
+								touchReleaseOnEdges : false,
+								centeredSlides : true,
+							},						
+							768 : {
+								slidesPerView : 1.15 ,
+								spaceBetween: 14,
+								touchReleaseOnEdges : false,
+								centeredSlides : true,
+							},
+						},
+						on : {
+							slideChange : function(){
+								var idx = pkg_slide_pc.realIndex;
+							}
+						}
+					};			
+					var pkg_slide = new Swiper('.pkg-slide',pkg_slide_pc)
+					
+				});
+				
+				function popup(event, pkgSeq){
+					event.preventDefault();
+					
+						if ("0" == pkgSeq) {
+							$("#pkgNm").text("자유구성 패키지");
+							$("#pkgPrice").text("￦ " + setComma("15900"*1) + "원 부터");
+						}
+					
+						if ("16" == pkgSeq) {
+							$("#pkgNm").text("스테디셀러 패키지");
+							$("#pkgPrice").text("￦ " + setComma("12900"*1) + "원 부터");
+						}
+					
+						if ("17" == pkgSeq) {
+							$("#pkgNm").text("스파이시 패키지");
+							$("#pkgPrice").text("￦ " + setComma("13900"*1) + "원 부터");
+						}
+					
+						if ("18" == pkgSeq) {
+							$("#pkgNm").text("프레시 패키지");
+							$("#pkgPrice").text("￦ " + setComma("18900"*1) + "원 부터");
+						}
+					
+						if ("19" == pkgSeq) {
+							$("#pkgNm").text("컵라면 패키지");
+							$("#pkgPrice").text("￦ " + setComma("13900"*1) + "원 부터");
+						}
+					
+					
+					var html = "";
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112031031399600.png" alt="러블리핫불닭볶음면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112020452167930.png" alt="사천백짬뽕"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030139435760.png" alt="순후추라면 사골곰탕맛"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030953057890.png" alt="된장라면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030221544290.png" alt="틈새라면 매운김치"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030344362210.png" alt="삿포로 라멘 미소"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030347245920.png" alt="삿포로 라멘 소유"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202111290345578700.png" alt="미고랭 핫 앤 스파이시라면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030410299750.png" alt="마마라면 쉬륌 톰냠"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202111290337484950.png" alt="미고랭라면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202111290329567300.png" alt="쌀국수 닭고기맛"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202111290308495980.png" alt="쌀국수 쇠고기맛"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202111290259101830.png" alt="하오하오 미톰"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112020427514940.png" alt="볶음너구리"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112020426127120.png" alt="모듬해물탕면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112020422325620.png" alt="순한너구리"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112020417209960.png" alt="감자면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112010450198571.png" alt="열무비빔면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202111120513322240.png" alt="로제불닭볶음면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109031136567400.png" alt="4가지치즈불닭볶음면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109031122312100.png" alt="신라면볶음면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109031050411970.png" alt="멸치칼국수"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109031044555180.png" alt="시원한메밀소바"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109031042255680.png" alt="오뚜기카레면 약간매운맛"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109031030086390.png" alt="오동통면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109031003009310.png" alt="진비빔면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109030938247310.png" alt="삼선맛짬뽕"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020449122120.png" alt="참깨라면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112031011053150.png" alt="불타는 고추짜장"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112031008530620.png" alt="맛있는라면 해물맛"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030956423590.png" alt="라이트불닭"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030945105170.png" alt="앵그리 짜파구리(봉지면)"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030930273930.png" alt="후루룩국수"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030925130280.png" alt="튀김우동면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030919273260.png" alt="찰비빔면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112020555470820.png" alt="짬뽕건면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112020552335640.png" alt="짜왕 건면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112020525040670.png" alt="짜왕"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112020516475980.png" alt="신라면블랙"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112020457223040.png" alt="신라면블랙 두부김치"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109030918543770.png" alt="앵그리너구리"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020558589420.png" alt="맛있는라면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020552235850.png" alt="얼큰한 너구리"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020544115630.png" alt="나가사끼짬뽕"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020538072370.png" alt="해물안성탕면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020528433910.png" alt="사리곰탕면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020527244520.png" alt="오징어짬뽕"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020453086050.png" alt="삼양라면 오리지널"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112031012419230.png" alt="불타는 고추짬뽕"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020428182160.png" alt="진짜장"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020426243810.png" alt="꼬꼬면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020416428190.png" alt="배홍동비빔면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020403432020.png" alt="후루룩칼국수"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020353475320.png" alt="틈새라면 볶음면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020343538450.png" alt="육개장라면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020335411500.png" alt="김치라면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020323103390.png" alt="간짬뽕"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020316503730.png" alt="진짜쫄면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020247460400.png" alt="쇠고기미역국라면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020230347080.png" alt="진진짜라"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020217212140.png" alt="크림진짬뽕"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020203493420.png" alt="진짬뽕"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020146074530.png" alt="보글보글 부대찌개면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020134316830.png" alt="라면사리 낱개"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020132171730.png" alt="옛날잡채(봉지)"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020125078890.png" alt="스낵면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109021150228070.png" alt="까르보불닭볶음면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109021138396030.png" alt="신라면건면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109021129245780.png" alt="더 왕뚜껑"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109021118313500.png" alt="무파마탕면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109021102128050.png" alt="진라면 순한맛"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109021050287430.png" alt="농심 사리면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109021022117700.png" alt="자연은 맛있다 정면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109021010266770.png" alt="맛있는라면 비건"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109010550038540.png" alt="사천짜파게티"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109010540490170.png" alt="열라면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109010450275210.png" alt="틈새라면 빨계떡"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109010437460150.png" alt="불닭볶음면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109010426539160.png" alt="비빔면 매운맛"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109010336169740.png" alt="진라면 매운맛"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109010248133080.png" alt="팔도비빔면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109010226143920.png" alt="안성탕면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109010220189340.png" alt="올리브 짜파게티"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109010205013600.png" alt="신라면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030310000210.png" alt="고추기름로스팅짜장라면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030307563970.png" alt="파기름로스팅짜장라면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030300326470.png" alt="생면식감 순한맛"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030258556250.png" alt="생면식감 매운맛"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030257396680.png" alt="탱탱쫄면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030227268850.png" alt="자연은 맛있다 홍면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030225439310.png" alt="자연은 맛있다 백면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030224074130.png" alt="생면식감 꽃게탕면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030219544060.png" alt="일품 해물라면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030217000430.png" alt="즉석 라볶이"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030204552780.png" alt="해물짬봉"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030159513110.png" alt="팥칼국수"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030149304270.png" alt="짜장면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030141288090.png" alt="스파게티"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030117286510.png" alt="북엇국라면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030113031450.png" alt="리얼치즈라면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112031034401680.png" alt="굴진짬뽕"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112031028579810.png" alt="삼양라면 매운맛"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112031023467340.png" alt="크림까르보불닭볶음면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112031021011690.png" alt="콩나물김치라면"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112031014599420.png" alt="짜짜로니"></li>';
+						}
+					
+						if ("-1" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109031113244900.png" alt="자연은 맛있다 백비빔면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112020452167930.png" alt="사천백짬뽕"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112031031399600.png" alt="러블리핫불닭볶음면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030139435760.png" alt="순후추라면 사골곰탕맛"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030953057890.png" alt="된장라면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030221544290.png" alt="틈새라면 매운김치"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030347245920.png" alt="삿포로 라멘 소유"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202111290337484950.png" alt="미고랭라면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202111290329567300.png" alt="쌀국수 닭고기맛"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030344362210.png" alt="삿포로 라멘 미소"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030410299750.png" alt="마마라면 쉬륌 톰냠"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202111290345578700.png" alt="미고랭 핫 앤 스파이시라면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202111290259101830.png" alt="하오하오 미톰"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202111290308495980.png" alt="쌀국수 쇠고기맛"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030204552780.png" alt="해물짬봉"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030159513110.png" alt="팥칼국수"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030149304270.png" alt="짜장면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030141288090.png" alt="스파게티"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030117286510.png" alt="북엇국라면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030113031450.png" alt="리얼치즈라면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112031034401680.png" alt="굴진짬뽕"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112031028579810.png" alt="삼양라면 매운맛"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112031023467340.png" alt="크림까르보불닭볶음면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112031021011690.png" alt="콩나물김치라면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112031014599420.png" alt="짜짜로니"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020134316830.png" alt="라면사리 낱개"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020132171730.png" alt="옛날잡채(봉지)"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020125078890.png" alt="스낵면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109021150228070.png" alt="까르보불닭볶음면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109021138396030.png" alt="신라면건면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109021129245780.png" alt="더 왕뚜껑"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109021118313500.png" alt="무파마탕면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109021102128050.png" alt="진라면 순한맛"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109021050287430.png" alt="농심 사리면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109021022117700.png" alt="자연은 맛있다 정면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109021010266770.png" alt="맛있는라면 비건"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109010550038540.png" alt="사천짜파게티"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109010540490170.png" alt="열라면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109010450275210.png" alt="틈새라면 빨계떡"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109010437460150.png" alt="불닭볶음면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109010426539160.png" alt="비빔면 매운맛"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109010336169740.png" alt="진라면 매운맛"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109010248133080.png" alt="팔도비빔면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109010226143920.png" alt="안성탕면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109010220189340.png" alt="올리브 짜파게티"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109010205013600.png" alt="신라면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112031012419230.png" alt="불타는 고추짬뽕"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112031011053150.png" alt="불타는 고추짜장"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112031008530620.png" alt="맛있는라면 해물맛"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030956423590.png" alt="라이트불닭"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030945105170.png" alt="앵그리 짜파구리(봉지면)"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030930273930.png" alt="후루룩국수"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030925130280.png" alt="튀김우동면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030919273260.png" alt="찰비빔면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112020555470820.png" alt="짬뽕건면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112020552335640.png" alt="짜왕 건면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112020525040670.png" alt="짜왕"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112020516475980.png" alt="신라면블랙"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112020457223040.png" alt="신라면블랙 두부김치"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020247460400.png" alt="쇠고기미역국라면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020217212140.png" alt="크림진짬뽕"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020203493420.png" alt="진짬뽕"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020146074530.png" alt="보글보글 부대찌개면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030310000210.png" alt="고추기름로스팅짜장라면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030307563970.png" alt="파기름로스팅짜장라면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030300326470.png" alt="생면식감 순한맛"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030258556250.png" alt="생면식감 매운맛"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030257396680.png" alt="탱탱쫄면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030227268850.png" alt="자연은 맛있다 홍면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030225439310.png" alt="자연은 맛있다 백면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030224074130.png" alt="생면식감 꽃게탕면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030219544060.png" alt="일품 해물라면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112030217000430.png" alt="즉석 라볶이"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112020422325620.png" alt="순한너구리"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112020417209960.png" alt="감자면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112010450198571.png" alt="열무비빔면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202111120513322240.png" alt="로제불닭볶음면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109031136567400.png" alt="4가지치즈불닭볶음면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109031122312100.png" alt="신라면볶음면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109031050411970.png" alt="멸치칼국수"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109031044555180.png" alt="시원한메밀소바"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109031042255680.png" alt="오뚜기카레면 약간매운맛"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109031030086390.png" alt="오동통면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109031003009310.png" alt="진비빔면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109030938247310.png" alt="삼선맛짬뽕"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109030918543770.png" alt="앵그리너구리"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020558589420.png" alt="맛있는라면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020552235850.png" alt="얼큰한 너구리"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020544115630.png" alt="나가사끼짬뽕"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020538072370.png" alt="해물안성탕면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020528433910.png" alt="사리곰탕면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020527244520.png" alt="오징어짬뽕"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020453086050.png" alt="삼양라면 오리지널"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020449122120.png" alt="참깨라면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020428182160.png" alt="진짜장"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020426243810.png" alt="꼬꼬면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020416428190.png" alt="배홍동비빔면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020403432020.png" alt="후루룩칼국수"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020353475320.png" alt="틈새라면 볶음면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020343538450.png" alt="육개장라면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020335411500.png" alt="김치라면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020323103390.png" alt="간짬뽕"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020316503730.png" alt="진짜쫄면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020230347080.png" alt="진진짜라"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112020427514940.png" alt="볶음너구리"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112020426127120.png" alt="모듬해물탕면"></li>';
+						}
+					
+						if ("0" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109031113244900.png" alt="자연은 맛있다 백비빔면"></li>';
+						}
+					
+						if ("16" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109010205013600.png" alt="신라면"></li>';
+						}
+					
+						if ("16" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109010220189340.png" alt="올리브 짜파게티"></li>';
+						}
+					
+						if ("16" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109010226143920.png" alt="안성탕면"></li>';
+						}
+					
+						if ("16" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109010248133080.png" alt="팔도비빔면"></li>';
+						}
+					
+						if ("16" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109010336169740.png" alt="진라면 매운맛"></li>';
+						}
+					
+						if ("17" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109010450275210.png" alt="틈새라면 빨계떡"></li>';
+						}
+					
+						if ("17" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109010437460150.png" alt="불닭볶음면"></li>';
+						}
+					
+						if ("17" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109010426539160.png" alt="비빔면 매운맛"></li>';
+						}
+					
+						if ("17" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109010540490170.png" alt="열라면"></li>';
+						}
+					
+						if ("17" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109010550038540.png" alt="사천짜파게티"></li>';
+						}
+					
+						if ("18" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202111120523386370.png" alt="우리밀 감자라면"></li>';
+						}
+					
+						if ("18" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202112010450198571.png" alt="열무비빔면"></li>';
+						}
+					
+						if ("18" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109021022117700.png" alt="자연은 맛있다 정면"></li>';
+						}
+					
+						if ("18" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109021010266770.png" alt="맛있는라면 비건"></li>';
+						}
+					
+						if ("18" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020947539330.png" alt="야채라면"></li>';
+						}
+					
+						if ("18" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109020930523030.png" alt="채황"></li>';
+						}
+					
+						if ("18" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109021030504220.png" alt="우리밀감자 짜장면"></li>';
+						}
+					
+						if ("18" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109021050287430.png" alt="농심 사리면"></li>';
+						}
+					
+						if ("18" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202109021054018380.png" alt="자연은 맛있다 정비빔면"></li>';
+						}
+					
+						if ("19" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202111120119098961.png" alt="짜파게티 범벅"></li>';
+						}
+					
+						if ("19" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202111120952487880.png" alt="앵그리짜파구리큰사발"></li>';
+						}
+					
+						if ("19" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202111120938190070.png" alt="카구리"></li>';
+						}
+					
+						if ("19" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202111110542403920.png" alt="불닭볶음면 큰컵"></li>';
+						}
+					
+						if ("19" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202111110515540031.png" alt="신라면 블랙"></li>';
+						}
+					
+						if ("19" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202111110519422331.png" alt="튀김우동 큰컵"></li>';
+						}
+					
+						if ("19" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202111120928581490.png" alt="컵누들 매콤한맛 컵"></li>';
+						}
+					
+						if ("19" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202111110559343180.png" alt="김치사발면"></li>';
+						}
+					
+						if ("19" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202111121005495850.png" alt="육개장사발면"></li>';
+						}
+					
+						if ("19" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202111110531291200.png" alt="진라면 매운맛 작은컵"></li>';
+						}
+					
+						if ("19" == pkgSeq) {
+							html += '<li><img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_RMN/ORMN_RMN_202111110515216541.png" alt="너구리 작은컵"></li>';
+						}
+					
+					$("#rmnList").html(html);
+					
+					document.getElementById('noodle-list-view').style.display = 'block';
+					$('html').addClass('lock');
+				}
+
+				function popupClose(){
+					document.getElementById('noodle-list-view').style.display = 'none';
+					$('html').removeClass('lock');
+				}
+			</script>
+			<div class="inwrap">
+				<div class="pkg_txt_box">
+					<h5 class="stit">무료배송 · 최대 41% 할인까지</h5>
+					<h3 class="btit">오늘의 라면 구독하기</h3>
+				</div>
+				<div class="pkg-slide-wrap">
+					<div class="pkg-slide swiper-container">
+						<ul class="swiper-wrapper">
+							
+								<li class="pkg-item swiper-slide">
+									<a href="./resources/oramyun/share/viewe8b4.html?no=23&amp;pgMode=pkg&amp;pkgSeq=0&amp;step=step2">
+										<div class="pkg-item-area recommend">
+											<div class="noodle-list-wrap">
+												<button type="button" class="noodle-list-btn" onclick="javascript:popup(event, '0');" tabindex="-1"><span>라면 보기</span></button>
+											</div>
+											<div class="selection-box">
+												<h4 class="sel-tit">자유구성 패키지</h4>
+												<p class="sel-infotxt">내가 원하는 라면만 골라 담을 수 있어요!</p>
+												<div class="sel-thumbimg">
+													<img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_PKG/ORMN_PKG_202110150435272401.png" onError="this.src='./resources/oramyun/portal/img/contents/img_subs_sel_free.png'" alt="자유구성 패키지">
+												</div>
+												<div class="sel-price"><span>15,900</span>원 부터</div>
+												<p class="sel-stxt">※ Single 박스(10봉지) 기준</p>
+											</div>
+										</div>
+									</a>
+								</li>
+							
+								<li class="pkg-item swiper-slide">
+									<a href="./resources/oramyun/share/view920b.html?no=23&amp;pgMode=pkg&amp;pkgSeq=16&amp;step=step2">
+										<div class="pkg-item-area ">
+											<div class="noodle-list-wrap">
+												<button type="button" class="noodle-list-btn" onclick="javascript:popup(event, '16');" tabindex="-1"><span>라면 보기</span></button>
+											</div>
+											<div class="selection-box">
+												<h4 class="sel-tit">스테디셀러 패키지</h4>
+												<p class="sel-infotxt">누구나 즐겨먹는 인기라면을 모았어요!</p>
+												<div class="sel-thumbimg">
+													<img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_PKG/ORMN_PKG_202109020509316021.png" onError="this.src='./resources/oramyun/portal/img/contents/img_subs_sel_free.png'" alt="스테디셀러 패키지">
+												</div>
+												<div class="sel-price"><span>12,900</span>원 부터</div>
+												<p class="sel-stxt">※ Single 박스(10봉지) 기준</p>
+											</div>
+										</div>
+									</a>
+								</li>
+							
+								<li class="pkg-item swiper-slide">
+									<a href="./resources/oramyun/share/view320a.html?no=23&amp;pgMode=pkg&amp;pkgSeq=17&amp;step=step2">
+										<div class="pkg-item-area ">
+											<div class="noodle-list-wrap">
+												<button type="button" class="noodle-list-btn" onclick="javascript:popup(event, '17');" tabindex="-1"><span>라면 보기</span></button>
+											</div>
+											<div class="selection-box">
+												<h4 class="sel-tit">스파이시 패키지</h4>
+												<p class="sel-infotxt">맵부심 모여라! 스트레스가 확 풀리는 맛</p>
+												<div class="sel-thumbimg">
+													<img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_PKG/ORMN_PKG_202111151039046881.png" onError="this.src='./resources/oramyun/portal/img/contents/img_subs_sel_free.png'" alt="스파이시 패키지">
+												</div>
+												<div class="sel-price"><span>13,900</span>원 부터</div>
+												<p class="sel-stxt">※ Single 박스(10봉지) 기준</p>
+											</div>
+										</div>
+									</a>
+								</li>
+							
+								<li class="pkg-item swiper-slide">
+									<a href="./resources/oramyun/share/view87dd.html?no=23&amp;pgMode=pkg&amp;pkgSeq=18&amp;step=step2">
+										<div class="pkg-item-area ">
+											<div class="noodle-list-wrap">
+												<button type="button" class="noodle-list-btn" onclick="javascript:popup(event, '18');" tabindex="-1"><span>라면 보기</span></button>
+											</div>
+											<div class="selection-box">
+												<h4 class="sel-tit">프레시 패키지</h4>
+												<p class="sel-infotxt">비건을 위한 특별 패키지!</p>
+												<div class="sel-thumbimg">
+													<img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_PKG/ORMN_PKG_202111150118431371.png" onError="this.src='./resources/oramyun/portal/img/contents/img_subs_sel_free.png'" alt="프레시 패키지">
+												</div>
+												<div class="sel-price"><span>18,900</span>원 부터</div>
+												<p class="sel-stxt">※ Single 박스(10봉지) 기준</p>
+											</div>
+										</div>
+									</a>
+								</li>
+							
+								<li class="pkg-item swiper-slide">
+									<a href="./resources/oramyun/share/viewfaac.html?no=23&amp;pgMode=pkg&amp;pkgSeq=19&amp;step=step2">
+										<div class="pkg-item-area ">
+											<div class="noodle-list-wrap">
+												<button type="button" class="noodle-list-btn" onclick="javascript:popup(event, '19');" tabindex="-1"><span>라면 보기</span></button>
+											</div>
+											<div class="selection-box">
+												<h4 class="sel-tit">컵라면 패키지</h4>
+												<p class="sel-infotxt">물만 부으면 끝! 더 간편하게 즐겨요</p>
+												<div class="sel-thumbimg">
+													<img class="lazy" src="./resources/oramyun/data/SITE000001/ORMN_PKG/ORMN_PKG_202111121152027721.png" onError="this.src='./resources/oramyun/portal/img/contents/img_subs_sel_free.png'" alt="컵라면 패키지">
+												</div>
+												<div class="sel-price"><span>13,900</span>원 부터</div>
+												<p class="sel-stxt">※ Single 박스(8봉지) 기준</p>
+											</div>
+										</div>
+									</a>
+								</li>
+							
+						</ul>
+						<div class="pkg-pagination"></div>
+					</div>
+					<div class="pkg-btn pkg-btn-next"></div>
+					<div class="pkg-btn pkg-btn-prev"></div>
+					<div id="noodle-list-view" class="noodle-list-view">
+						<div class="noodle-list-layer">
+							<div class="close-btn"><button class="noodle-view-closebtn" title="라면 보기 닫기" onclick="javascript:popupClose();"></button></div>
+							<div class="layer-inner">
+								<div class="head-item">
+									<div class="head-title-box">
+										<h4 class="b-tit" id="pkgNm"></h4>
+										<p class="s-txt" id="pkgPrice"></p>
+									</div>
+								</div>
+								<div class="cont-item">
+									<div class="noodle-item-list">
+										<ul id="rmnList"></ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section id="intro05" class="intro05">
+			<div class="inwrap">
+				<div class="gift_txt_box">
+					<div class="gift_txt">
+						<h4 class="btit">선물하기</h4>
+						<p class="stxt">1회 구매로 오늘의 라면을 선물하세요 !</p>
+					</div>
+					<a href="./resources/oramyun/share/view7050.html?no=40" class="btn giftbtn" title="선물하기">선물하기</a>
+				</div>
+				<img class="gift-img" src="./resources/oramyun/portal/img/main/intro/img_intro_bg03.png" alt="선물하기 박스">
+			</div>
+		</section>
+	</div>
+</div>
+<!-- container:E -->
+<script type="text/javascript" src="portal/js/main_renew.js"></script>
+
+
+<!--// page end -->
+
+	<!-- footer:S -->
+	
+
+
+
+
+<script type="text/javascript" src="./resources/oramyun/share/cmm/js/jquery/jqueryFromCheck.js"></script>
+<script type="text/javascript">
+
+function writeNqrProc(form){		
+	var name = $('#'+form+' [name="name"]').val();
+	var cpNmDuty = $('#'+form+' [name="cpNmDuty"]').val();
+	var phoneNumEmail = $('#'+form+' [name="phoneNumEmail"]').val();
+	var cnts = $('#'+form+' [name="cnts"]').val();
+	var nqrType = $('#'+form+' [name="nqrType"]').val();
+	
+	var checkFormFlag = true;
+	
+	setError($('#'+form+' [name="name"]'), false);
+	if(name == ''){
+		setError($('#'+form+' [name="name"]'), true);
+		checkFormFlag = false;
+	}
+	setError($('#'+form+' [name="cpNmDuty"]'), false);
+	if(cpNmDuty == ''){
+		setError($('#'+form+' [name="cpNmDuty"]'), true);
+		checkFormFlag = false;
+	}
+	setError($('#'+form+' [name="phoneNumEmail"]'), false);
+	if(phoneNumEmail == ''){
+		setError($('#'+form+' [name="phoneNumEmail"]'), true);
+		checkFormFlag = false;
+	}
+	setError($('#'+form+' [name="cnts"]'), false);
+	if(cnts == ''){
+		setError($('#'+form+' [name="cnts"]'), true);
+		checkFormFlag = false;
+	}
+	
+	if(!checkFormFlag){
+		alert("필수 항목을 입력 하십시요.");
+		return false;
+	}
+
+	if(confirm("등록하시겠습니까?")){
+		maskShow();
+		$('#'+form).submit();
+	}
+}
+
+function bizInfoOpen(ftrLnsNum){
+	var url = "http://www.ftc.go.kr/bizCommPop.do?wrkr_no="+ftrLnsNum;
+	
+	window.open(url, "bizCommPop", "width=750, height=700;");
+}
+
+$(document).ready(function() {
+	$('.counsel-layer .layer-closebtn').click(function(){
+		$('.counsel-layer-area .counsel-input-box').children().removeClass("error");
+	});
+});
+
+</script>
+
+<!-- footer -->
+<jsp:include page="/WEB-INF/views/inc/footer_o.jsp"></jsp:include>
+
+<!-- 네이버광고로그분석 -->
+<!-- 공통 적용 스크립트 , 모든 페이지에 노출되도록 설치. 단 전환페이지 설정값보다 항상 하단에 위치해야함 --> 
+<script type="text/javascript" src="./resources/wcs.naver.net/wcslog.js"> </script> 
+<script type="text/javascript"> 
+if (!wcs_add) var wcs_add={};
+wcs_add["wa"] = "s_1b6f111a9dc6";
+if (!_nasa) var _nasa={};
+if(window.wcs){
+wcs.inflow("oramyun.com");
+wcs_do(_nasa);
+}
+</script>
+	<!-- footer:E -->
+</div>
+
+<!-- 홈페이지 전용 js -->
+<script src="./resources/unpkg.com/aos%402.3.1/dist/aos.js"></script>
+<script type="text/javascript" src="./resources/oramyun/portal/js/layout.js"></script>
+<script type="text/javascript" src="./resources/oramyun/portal/js/sub.js"></script>
+<script type="text/javascript">
+	AOS.init({
+		once: true,
+		offset: 150,
+		duration: 1000,
+	});
+</script>
+<script type="text/javascript">
+	var lazyLoadInstance = new LazyLoad({
+		elements_selector: ".lazy",
+	});
+</script>
+</body>
+
+<!-- Mirrored from oramyun.com/main.do?pgMode=show_pkg by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 10 Dec 2021 03:51:01 GMT -->
+</html>
+
+		
+

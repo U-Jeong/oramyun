@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTDMapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+ <mapper namespace="com.itwillbs.mapper.GoodsMapper">
+ 	<insert id="goodsInsert">
+			INSERT INTO GOODS (
+<!-- 								GOODS_NO, -->
+								GOODS_CATEGORY,
+								GOODS_NAME,
+								GOODS_CONTENT,
+								GOODS_ORIGIN_PRICE,
+								GOODS_SELL_PRICE,
+								GOODS_SALE_PRICE,
+								GOODS_DATE,
+								GOODS_KEYWORD,
+								GOODS_PICK,
+								GOODS_THUMBNAIL
+								GOODS_ATT_AMOUNT
+								)
+						VALUES (
+<!-- 								#{SEQ_GOODS_NO.NEXTVAL}, -->
+								#{GOODS_CATEGORY},
+								#{GOODS_NAME},
+								#{GOODS_CONTENT},
+								#{GOODS_ORIGIN_PRICE},
+								#{GOODS_SELL_PRICE},
+								#{GOODS_SALE_PRICE},
+								#{GOODS_DATE},
+								#{GOODS_KEYWORD},
+								#{GOODS_PICK},
+								#{GOODS_THUMBNAIL}
+								#{GOODS_ATT_AMOUNT}
+							   	)				
+	</insert>
+	
+	<select id="getGoods" resultType="Oramyun.shop.goods.GoodsDTO"> 
+ 		SELECT * FROM GOODS WHERE GOODS_NO=#{GOODS_NO}
+ 	</select>
+ 	
+	<update id="goodsModifyPro">
+		UPDATE GOODS SET GOODS_NAME=#{GOODS_NAME} WHERE GOODS_NO=#{GOODS_NO}
+	</update>
+	
+	<delete id="goodsDeletePro">
+		DELETE FROM GOODS WHERE GOODS_NO=#{GOODS_NO}
+	</delete>
+	
+	<select id="cateGoodsList" resultType="Oramyun.shop.goods.GoodsDTO"> 
+		SELECT * FROM GOODS ORDER BY GOODS_NO 
+	</select>
+	
+ 
+ </mapper>
