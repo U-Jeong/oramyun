@@ -14,6 +14,15 @@
 
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
 	<resources mapping="/resources/**" location="/resources/" />
+	<!-- javascript/jquery -->
+<!--   	<mvc:resources mapping="/js/**"  location="/resources/js/" /> -->
+   
+	<!-- img path -->
+<!--   	<mvc:resources mapping="/img/**" location="/resources/img/" /> -->
+   
+	<!-- css path -->
+<!--   	<mvc:resources mapping="/css/**" location="/resources/css/" /> -->
+
 
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -23,7 +32,23 @@
 	
 	<context:component-scan base-package="com.itwillbs.oramyun" />
 	<context:component-scan base-package="com.itwillbs.controller" />
-	<context:component-scan base-package="Oramyun.shop.goods" />
+	<context:component-scan base-package="Oramyun.shop.*" />
+	<context:component-scan base-package="Oramyun.member.*" />
+	<context:component-scan base-package="Oramyun.board.*" />
+	<context:component-scan base-package="Oramyun.admin.*" />
+	
+	<!-- 	파일업로드 -->
+	<beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<beans:property name="maxUploadSize" value="10485760"></beans:property>
+	</beans:bean>
+	
+	<!-- 업로드 관련 빈 -->
+<!-- 	<beans:bean id="multipartResolver" class="org.springframework.web.multipart.support.StandardServletMultipartResolver"></beans:bean>		 -->
+
+	<!-- 업로드 폴더 -->
+	<beans:bean id="uploadPath" class="java.lang.String">
+		<beans:constructor-arg value="D:\\workspace_sts3\\oramyun\\src\\main\\webapp\\resources\\upload"></beans:constructor-arg>
+	</beans:bean>
 	
 	
 	

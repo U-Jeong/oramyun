@@ -1,7 +1,6 @@
 package Oramyun.shop.goods;
 
 import java.util.List;
-import java.util.Map;
 
 public interface GoodsService {
 	
@@ -14,5 +13,7 @@ public interface GoodsService {
 	public void goodsDeletePro(GoodsDTO goods);
 
 	public List<GoodsDTO> cateGoodsList();
+
+	public GoodsDTO numCheck(GoodsDTO goods);
 
 }

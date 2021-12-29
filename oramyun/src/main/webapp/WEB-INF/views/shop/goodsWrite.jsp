@@ -5,23 +5,6 @@
 <head>
 <meta charset="UTF-8">
 <title>상품등록</title>
-<!-- 공통 css -->
-<link rel="stylesheet" media="all" href="../resources/css/Oramyun.css">
-<link rel="stylesheet" media="all" href="../resources/oramyun/portal/cmmCss/cmm-importd5f7.css?ver=2.0"/>
-<link rel="stylesheet" media="all" href="../resources/oramyun/portal/cmmCss/swiper.css"/>
-
-<!-- 공통 js -->
-<script type="text/javascript" src="../resources/oramyun/portal/cmmJs/jquery-3.4.1.min.js"></script>
-<script type="text/javascript" src="../resources/oramyun/portal/cmmJs/jquery.easing.1.3.js"></script>
-<script type="text/javascript" src="../resources/oramyun/portal/cmmJs/swiper.min.js"></script>
-<script type="text/javascript" src="../resources/oramyun/portal/cmmJs/lazyload.min.js"></script>
-<script src="../resources/code.jquery.com/jquery-1.12.4.js"></script>
-
-<!-- datepicker -->
-<link rel="stylesheet" media="all" href="../resources/oramyun/portal/cmmCss/datepicker_style.css"/>
-<script src="../resources/ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script src="../resources/code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
-
 <style type="text/css">
 * {
 	margin: auto;
@@ -47,9 +30,7 @@ h1 {
 </head>
 <body>
 <br><br>
-<!-- header -->
-<jsp:include page="/WEB-INF/views/inc/header_o.jsp"></jsp:include>
-<%-- <h2>${title}</h2> --%>
+<h2 align="center">상품등록하자요</h2>
 <div align="center">
 </div>
 <form name="frm" id="frm" action="${pageContext.request.contextPath }/shop/writePro" method="post">
@@ -61,31 +42,40 @@ h1 {
 						style="padding:10px;">
 	</td>
 </tr>
+<!-- <div class="form_section" align="center"> -->
+<!-- 	<div class="form_section_title"> -->
+<!--         <label>상품 이미지</label> -->
+<!-- 	</div> -->
+<!--     <div class="form_section_content"> -->
+<!--     	<input type="file" id ="fileItem" name='uploadFile' style="height: 30px;"> -->
+<!-- 	</div> -->
+<!-- </div>   -->
+<!-- <tr> -->
+<!-- 	<th>상품 이미지</th> -->
+<!-- 	<td> -->
+<!-- 		<input type="file" id ="fileItem" name='uploadFile' style="height: 30px; padding-top:5px;"> -->
+<!--     	파일 여러개 -->
+<!-- 		<!-- <input type="file" multiple> --> -->
+<!-- 	</td> -->
+<!-- </tr> -->
 <tr>
 	<th>상품설명</th>
 	<td>
 		<textarea rows="30" cols="100" id="GOODS_CONTENT" name="GOODS_CONTENT"></textarea>
 	</td>
 </tr>
-<tr>
-	<th>카테고리 </th>
-		<td>
-			<select name="GOODS_CATEGORY">
-				<option value="outer">outer</option>
-				<option value="top">top</option>
-				<option value="one-piece">one-piece</option>
-				<option value="bottom">bottom</option>
-				<option value="acc">acc</option>
-			</select>
-		</td>
-</tr>
-<tr>
-	<th>상품원가</th>
-	<td>
-		<input type="text" name="GOODS_ORIGIN_PRICE" id="GOODS_ORIGIN_PRICE" laceholder="상품원가" size="40" 
-						style="padding:10px;">
-	</td>
-</tr>
+<!-- <tr> -->
+<!-- 	<th>카테고리 </th> -->
+<!-- 		<td> -->
+<!-- 			<select name="GOODS_CATEGORY"> -->
+<!-- 				<option value="outer">outer</option> -->
+<!-- 				<option value="top">top</option> -->
+<!-- 				<option value="one-piece">one-piece</option> -->
+<!-- 				<option value="bottom">bottom</option> -->
+<!-- 				<option value="acc">acc</option> -->
+<!-- 			</select> -->
+<!-- 		</td> -->
+<!-- </tr> -->
 <tr>
 	<th>상품할인가</th>
 	<td>
@@ -100,17 +90,17 @@ h1 {
 						style="padding:10px;">
 	</td>
 </tr>
-			<tr>
-				<th>PICK</th>
-				<td><input type="checkbox" name="PICK" id="PICK" value=" "
-					style="padding: 10px;"> 공백 <input type="checkbox"
-					name="PICK" id="PICK" value="BEST" style="padding: 10px;">
-					BEST <input type="checkbox" name="PICK" id="PICK" value="MD PICK"
-					style="padding: 10px;"> MD PICK <input type="checkbox"
-					name="PICK" id="PICK" value="MUSTHAVE" style="padding: 10px;">
-					MUSTHAVE <input type="hidden" name="GOODS_PICK" id="GOODS_PICK"
-					value=""></td>
-			</tr>
+<!-- 			<tr> -->
+<!-- 				<th>PICK</th> -->
+<!-- 				<td><input type="checkbox" name="PICK" id="PICK" value=" " -->
+<!-- 					style="padding: 10px;"> 공백 <input type="checkbox" -->
+<!-- 					name="PICK" id="PICK" value="BEST" style="padding: 10px;"> -->
+<!-- 					BEST <input type="checkbox" name="PICK" id="PICK" value="MD PICK" -->
+<!-- 					style="padding: 10px;"> MD PICK <input type="checkbox" -->
+<!-- 					name="PICK" id="PICK" value="MUSTHAVE" style="padding: 10px;"> -->
+<!-- 					MUSTHAVE <input type="hidden" name="GOODS_PICK" id="GOODS_PICK" -->
+<!-- 					value=""></td> -->
+<!-- 			</tr> -->
 <!-- 			<tr> -->
 <!-- 				<th>상품사이즈</th> -->
 <!-- 				<td><input type="checkbox" name="SIZE" value="FREE" -->
@@ -141,12 +131,10 @@ h1 {
 </table>
 		<div align="center">
 			<input type="submit" class="btn" id="write" value="작성하기">
-			<button a href="${pageContext.request.contextPath }/shop/goodList"
+			<button a href="${pageContext.request.contextPath }/goodsList"
 				class="btn" id="list">목록으로</button>
 		</div>
 </form>
-<!-- footer -->
-<jsp:include page="/WEB-INF/views/inc/footer_o.jsp"></jsp:include>
 <script type="text/javascript">
 function fn_insertBoard() { // 유효성체크
 
@@ -197,9 +185,59 @@ function fn_insertBoard() { // 유효성체크
         $("#GOODS_ATT_AMOUNT").focus();
         return false;
     }
-
-
 	comSubmit.submit();
+}
+
+/* 이미지 업로드 */
+$("input[type='file']").on("change", function(e){
+// 	alert("동작");
+
+	let formData = new FormData();
+	let fileInput = $('input[name="uploadFile"]');
+	let fileList = fileInput[0].files;
+	let fileObj = fileList[0];
+	
+	console.log("fileList : " + fileList);
+	console.log("fileObj : " + fileObj);
+	
+	console.log("fileName : " + fileObj.name);
+	console.log("fileSize : " + fileObj.size);
+	console.log("fileType(MimeType) : " + fileObj.type);
+	
+	if(!fileCheck(fileObj.name, fileObj.size)){
+		return false;
+	}
+// 	alert("통과");
+	
+	formData.append("uploadFile", fileObj);
+	
+	$.ajax({
+		url: '/admin/uploadAjaxAction',
+    	processData : false,
+    	contentType : false,
+    	data : formData,
+    	type : 'POST',
+    	dataType : 'json'
+	});
+});
+
+/* var, method related with attachFile */
+let regex = new RegExp("(.*?)\.(jpg|png)$");
+let maxSize = 1048576; //1MB	
+
+function fileCheck(fileName, fileSize){
+
+	if(fileSize >= maxSize){
+		alert("파일 사이즈 초과");
+		return false;
+	}
+		  
+	if(!regex.test(fileName)){
+		alert("해당 종류의 파일은 업로드할 수 없습니다.");
+		return false;
+	}
+	
+	return true;		
 	
 }
 </script>

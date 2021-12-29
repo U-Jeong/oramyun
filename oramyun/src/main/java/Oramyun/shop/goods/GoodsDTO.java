@@ -8,14 +8,10 @@ public class GoodsDTO {
 	private String GOODS_CATEGORY;
 	private String GOODS_NAME;
 	private String GOODS_CONTENT;
-	private int GOODS_ORIGIN_PRICE;
 	private int GOODS_SELL_PRICE;
 	private int GOODS_SALE_PRICE;
 	private Timestamp GOODS_DATE;
-	private String GOODS_KEYWORD;
-	private String GOODS_PICK;
-	private String GOODS_THUMBNAIL;
-	private String GOODS_ATT_AMOUNT;
+	private String GOODS_AMOUNT;
 	
 	public String getGOODS_NO() {
 		return GOODS_NO;
@@ -41,12 +37,6 @@ public class GoodsDTO {
 	public void setGOODS_CONTENT(String gOODS_CONTENT) {
 		GOODS_CONTENT = gOODS_CONTENT;
 	}
-	public int getGOODS_ORIGIN_PRICE() {
-		return GOODS_ORIGIN_PRICE;
-	}
-	public void setGOODS_ORIGIN_PRICE(int gOODS_ORIGIN_PRICE) {
-		GOODS_ORIGIN_PRICE = gOODS_ORIGIN_PRICE;
-	}
 	public int getGOODS_SELL_PRICE() {
 		return GOODS_SELL_PRICE;
 	}
@@ -65,30 +55,20 @@ public class GoodsDTO {
 	public void setGOODS_DATE(Timestamp gOODS_DATE) {
 		GOODS_DATE = gOODS_DATE;
 	}
-	public String getGOODS_KEYWORD() {
-		return GOODS_KEYWORD;
+	public String getGOODS_AMOUNT() {
+		return GOODS_AMOUNT;
 	}
-	public void setGOODS_KEYWORD(String gOODS_KEYWORD) {
-		GOODS_KEYWORD = gOODS_KEYWORD;
-	}
-	public String getGOODS_PICK() {
-		return GOODS_PICK;
-	}
-	public void setGOODS_PICK(String gOODS_PICK) {
-		GOODS_PICK = gOODS_PICK;
-	}
-	public String getGOODS_THUMBNAIL() {
-		return GOODS_THUMBNAIL;
-	}
-	public void setGOODS_THUMBNAIL(String gOODS_THUMBNAIL) {
-		GOODS_THUMBNAIL = gOODS_THUMBNAIL;
+	public void setGOODS_AMOUNT(String gOODS_AMOUNT) {
+		GOODS_AMOUNT = gOODS_AMOUNT;
 	}
 	
-	public String getGOODS_ATT_AMOUNT() {
-		return GOODS_ATT_AMOUNT;
+	@Override
+	public String toString() {
+		return "GoodsDTO [GOODS_NO=" + GOODS_NO + ", GOODS_CATEGORY=" + GOODS_CATEGORY + ", GOODS_NAME=" + GOODS_NAME
+				+ ", GOODS_CONTENT=" + GOODS_CONTENT + ", GOODS_SELL_PRICE=" + GOODS_SELL_PRICE + ", GOODS_SALE_PRICE="
+				+ GOODS_SALE_PRICE + ", GOODS_DATE=" + GOODS_DATE + ", GOODS_AMOUNT=" + GOODS_AMOUNT + "]";
 	}
-	public void setGOODS_ATT_AMOUNT(String gOODS_ATT_AMOUNT) {
-		GOODS_ATT_AMOUNT = gOODS_ATT_AMOUNT;
-	}
+	
 
+	
 }

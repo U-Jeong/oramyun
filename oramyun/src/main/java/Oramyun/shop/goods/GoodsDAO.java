@@ -25,6 +25,11 @@ public class GoodsDAO {
 		return sqlSession.selectList(namespace+".cateGoodsList");
 	}
 
+	public GoodsDTO numCheck(GoodsDTO goods) {
+		System.out.println("GoodsDAO.numCheck()");
+		return sqlSession.selectOne(namespace+".numCheck", goods);
+	}
+	
 	public void goodsModifyPro(GoodsDTO goods) {
 		System.out.println("GoodsDAO.goodsModifyPro()");
 		sqlSession.update(namespace+".goodsModifyPro", goods);
@@ -37,9 +42,11 @@ public class GoodsDAO {
 	}
 
 	public GoodsDTO getGoods(String GOODS_NO) {
-		System.out.println("GoodsDAO.userCheck()");
+		System.out.println("GoodsDAO.getGoods()");
 		return sqlSession.selectOne(namespace+".getGoods", GOODS_NO);
 	}
+
+
 
 
 }

@@ -7,18 +7,26 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>GoodsModifyForm</title>
+<title>상품수정</title>
+<style type="text/css">
+
+
+</style>
 </head>
 <body>
 <div align="center">
 <form action="${pageContext.request.contextPath}/shop/goodsModifyPro" method="post">
-<c:forEach var="goods" items="${goods }">
-상품번호 : <input type="text" name="name"><c:out value="${goods.getGOODS_NO()}"/><br>
-상품명 : <input type="text" name="id" ><c:out value="${goods.getGOODS_NAME()}"/><br>
+상품번호 : <input type="text" name="GOODS_NO" id="GOODS_NO" class="GOODS_NO">
+상품카테고리 : <input type="text" name="GOODS_CATEGORY" id="GOODS_CATEGORY" class="GOODS_CATEGORY">
+상품명 : <input type="text" name="GOODS_NAME" id="GOODS_NAME" class="GOODS_NAME" >
+상품설명 : <input type="text" name="GOODS_CONTENT" id="GOODS_CONTENT" class="GOODS_CONTENT">
+상품판매가 : <input type="text" name="GOODS_SELL_PRICE" id="GOODS_SELL_PRICE" class="GOODS_SELL_PRICE">
+상품할인가 : <input type="text" name="GOODS_SALE_PRICE" id="GOODS_SALE_PRICE" class="GOODS_SALE_PRICE">
+상품수량 : <input type="text" name="GOODS_ATT_AMOUNT" id="GOODS_ATT_AMOUNT" class="GOODS_ATT_AMOUNT">
 <input type="submit" value="상품수정">
-</c:forEach>
+<%-- </c:forEach> --%>
 <button a href="${pageContext.request.contextPath }/shop/goodsDelete" class="btn" id="delete">상품삭제</button>
-<button a href="${pageContext.request.contextPath }/shop/goodsList" class="btn" id="list">상품목록</button>
+<button a href="${pageContext.request.contextPath }/goodsList" class="btn" id="list">상품목록</button>
 </form>	
 </div>
 </html>

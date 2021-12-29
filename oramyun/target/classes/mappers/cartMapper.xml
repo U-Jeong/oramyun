@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTDMapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+ <mapper namespace="com.itwillbs.mapper.CartMapper">
+ 	<!-- 카트 추가 -->
+	<insert id="addCart">
+		insert into cart(member_num, GOODS_NO, GOODS_AMOUNT)
+		values(#{member_num}, #{GOODS_NO}, #{GOODS_AMOUNT}) 
+	</insert>
+	
+	<!-- 카트 삭제 -->
+	<delete id="deleteCart">
+		delete from cart where cartId = #{cartId}
+	</delete>
+	
+	<!-- 카트 수량 수정 -->
+	<update id="modifyCount">
+		update cart set GOODS_AMOUNT=#{GOODS_AMOUNT} where cartId = #{cartId}
+	</update>
+	
+	
+	<!-- 카트 목록 -->
+	<select id="getCart" resultType="Oramyun.shop.cart.CartDTO">
+		select a.cartId, a.member_num, a.GOODS_NO, a.GOODS_AMOUNT, G.GOODS_NAME, G.GOODS_SELL_PRICE, G.GOODS_SALE_PRICE
+		from cart a 
+			 left outer join GOODS G on a.GOODS_NO = b.GOODS_NO
+		where member_num = #{member_num}	
+	</select>
+	
+	<!-- 카트 확인 -->
+	<select id="checkCart" resultType="Oramyun.shop.cart.CartDTO">
+		select * from cart 
+		where member_num = #{member_num} and GOODS_NO = #{GOODS_NO}
+	</select>
+	
+ </mapper>

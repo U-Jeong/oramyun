@@ -12,7 +12,7 @@
 상품번호 : <input type="text" name="GOODS_NO">
 상품명 : <input type="text" name="GOODS_NAME" value="">
 <input type="submit" class="btn" id="delete" value="삭제">
-<button a href="${pageContext.request.contextPath }/shop/goodsList" class="btn" id="list">취소</button>
+<button a href="${pageContext.request.contextPath }/goodsList" class="btn" id="list">취소</button>
 </form>
 
 </body>

@@ -18,7 +18,7 @@
 
     <!-- Core Style CSS -->
     <link rel="stylesheet" href="./resources/page/css/core-style.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./WEB-INF/views/main/style.css">
 
     <!-- Responsive CSS -->
     <link href="./resources/page/css/responsive.css" rel="stylesheet">
@@ -108,13 +108,13 @@
                             <div class="top_single_area d-flex align-items-center">
                                 <!-- Logo Area -->
                                 <div class="top_logo">
-                                    <a href="#"><img src="./resources/page/img/core-img/logo.png" alt=""></a>
+                                    <a href="${pageContext.request.contextPath }/main"><img src="./resources/page/img/core-img/logo.png" alt=""></a>
                                 </div>
                                 <!-- Cart & Menu Area -->
                                 <div class="header-cart-menu d-flex align-items-center ml-auto">
                                     <!-- Cart Area -->
                                     <div class="cart">
-                                        <a href="#" id="header-cart-btn" target="_blank"><span class="cart_quantity">2</span> <i class="ti-bag"></i> Your Bag $20</a>
+                                        <a href="${pageContext.request.contextPath }/cart" id="header-cart-btn" target="_blank"><span class="cart_quantity">2</span> <i class="ti-bag"></i> 장바구니cartVO.돈받아와</a>
                                         <!-- Cart List Area Start -->
                                         <ul class="cart-list">
                                             <li>
@@ -135,7 +135,7 @@
                                             </li>
                                             <li class="total">
                                                 <span class="pull-right">Total: $20.00</span>
-                                                <a href="cart.html" class="btn btn-sm btn-cart">Cart</a>
+                                                <a href="${pageContext.request.contextPath }/cart" class="btn btn-sm btn-cart">Cart</a>
                                                 <a href="checkout-1.html" class="btn btn-sm btn-checkout">Checkout</a>
                                             </li>
                                         </ul>
@@ -171,20 +171,21 @@
 
                                     <div class="collapse navbar-collapse align-items-start collapse" id="karl-navbar">
                                         <ul class="navbar-nav animated" id="nav">
-                                            <li class="nav-item active"><a class="nav-link" href="./WEB-INF/views/main/shop.jsp">Home</a></li>
+                                            <li class="nav-item active"><a class="nav-link" href="${pageContext.request.contextPath }/">Home</a></li>
                                             <li class="nav-item dropdown">
                                                 <a class="nav-link dropdown-toggle" href="#" id="karlDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
                                                 <div class="dropdown-menu" aria-labelledby="karlDropdown">
-                                                    <a class="dropdown-item" href="index.html">Home</a>
-                                                    <a class="dropdown-item" href="shop.html">Shop</a>
-                                                    <a class="dropdown-item" href="product-details.html">Product Details</a>
-                                                    <a class="dropdown-item" href="cart.html">Cart</a>
-                                                    <a class="dropdown-item" href="checkout.html">Checkout</a>
+                                                		<a class="dropdown-item" href="${pageContext.request.contextPath }/shop">Shop</a>
+                                                        <a class="dropdown-item" href="${pageContext.request.contextPath }/product_details">Product Details</a>
+                                                        <a class="dropdown-item" href="${pageContext.request.contextPath }/event">event</a>
+                                                        <a class="dropdown-item" href="${pageContext.request.contextPath }/racipe">Best Racipe</a>
+                                                    	<a class="dropdown-item" href="${pageContext.request.contextPath }/notice">Notice</a>
+	                                                    <a class="dropdown-item" href="${pageContext.request.contextPath }/FAQ">FAQ</a>
                                                 </div>
                                             </li>
-                                            <li class="nav-item"><a class="nav-link" href="#">Dresses</a></li>
-                                            <li class="nav-item"><a class="nav-link" href="#"><span class="karl-level">hot</span> Shoes</a></li>
-                                            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }/review"><span class="karl-level">hot</span> Review</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }/login">Login</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath }/join">Join</a></li>
                                         </ul>
                                     </div>
                                 </nav>
@@ -458,7 +459,7 @@
                                         <h4 class="product-price">$39.90</h4>
                                         <p>Jeans midi cocktail dress</p>
                                         <!-- Add to Cart -->
-                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+                                        <a href="./WEB-INF/views/add_to_cart.jsp" class="add-to-cart-btn">ADD TO CART</a>
                                     </div>
                                 </div>
 
@@ -468,7 +469,7 @@
                                     <div class="product-img">
                                         <img src="./resources/page/img/product-img/product-2.jpg" alt="">
                                         <div class="product-quicview">
-                                            <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
+                                            <a href="" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
                                         </div>
                                     </div>
                                     <!-- Product Description -->
@@ -476,7 +477,7 @@
                                         <h4 class="product-price">$39.90</h4>
                                         <p>Jeans midi cocktail dress</p>
                                         <!-- Add to Cart -->
-                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+                                        <a href="./WEB-INF/views/add_to_cart.jsp" class="add-to-cart-btn">ADD TO CART</a>
                                     </div>
                                 </div>
 
@@ -494,7 +495,7 @@
                                         <h4 class="product-price">$39.90</h4>
                                         <p>Jeans midi cocktail dress</p>
                                         <!-- Add to Cart -->
-                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+                                        <a href="./WEB-INF/views/add_to_cart.jsp" class="add-to-cart-btn">ADD TO CART</a>
                                     </div>
                                 </div>
 
@@ -512,7 +513,7 @@
                                         <h4 class="product-price">$39.90</h4>
                                         <p>Jeans midi cocktail dress</p>
                                         <!-- Add to Cart -->
-                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+                                        <a href="./WEB-INF/views/add_to_cart.jsp" class="add-to-cart-btn">ADD TO CART</a>
                                     </div>
                                 </div>
 
@@ -530,7 +531,7 @@
                                         <h4 class="product-price">$39.90</h4>
                                         <p>Jeans midi cocktail dress</p>
                                         <!-- Add to Cart -->
-                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+                                        <a href="./WEB-INF/views/add_to_cart.jsp" class="add-to-cart-btn">ADD TO CART</a>
                                     </div>
                                 </div>
 
@@ -548,7 +549,7 @@
                                         <h4 class="product-price">$39.90</h4>
                                         <p>Jeans midi cocktail dress</p>
                                         <!-- Add to Cart -->
-                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+                                        <a href="./WEB-INF/views/add_to_cart.jsp" class="add-to-cart-btn">ADD TO CART</a>
                                     </div>
                                 </div>
 
@@ -566,7 +567,7 @@
                                         <h4 class="product-price">$39.90</h4>
                                         <p>Jeans midi cocktail dress</p>
                                         <!-- Add to Cart -->
-                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+                                        <a href="./WEB-INF/views/add_to_cart.jsps" class="add-to-cart-btn">ADD TO CART</a>
                                     </div>
                                 </div>
 
@@ -584,7 +585,7 @@
                                         <h4 class="product-price">$39.90</h4>
                                         <p>Jeans midi cocktail dress</p>
                                         <!-- Add to Cart -->
-                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+                                        <a href="./WEB-INF/views/add_to_cart.jsp" class="add-to-cart-btn">ADD TO CART</a>
                                     </div>
                                 </div>
 
@@ -602,7 +603,7 @@
                                         <h4 class="product-price">$39.90</h4>
                                         <p>Jeans midi cocktail dress</p>
                                         <!-- Add to Cart -->
-                                        <a href="#" class="add-to-cart-btn">ADD TO CART</a>
+                                        <a href="./WEB-INF/views/add_to_cart.jsp" class="add-to-cart-btn">ADD TO CART</a>
                                     </div>
                                 </div>
                             </div>

@@ -23,7 +23,7 @@ public class GoodsServiceImpl implements GoodsService {
 
 	@Override
 	public GoodsDTO getGoods(String GOODS_NO) {
-		System.out.println("GoodsServiceImpl.getMember()");
+		System.out.println("GoodsServiceImpl.getGoods()");
 		return goodsDAO.getGoods(GOODS_NO);
 	}
 
@@ -44,6 +44,12 @@ public class GoodsServiceImpl implements GoodsService {
 		System.out.println("GoodsServiceImpl.goodsDeletePro()");
 		goodsDAO.goodsDeletePro(goods);
 		
+	}
+
+	@Override
+	public GoodsDTO numCheck(GoodsDTO goods) {
+		System.out.println("GoodsServiceImpl.numCheck()");
+		return goodsDAO.numCheck(goods);
 	}
 
 
