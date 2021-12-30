@@ -4,18 +4,25 @@ import java.util.List;
 
 public interface CartService {
 	
-	/* 카트 추가 */
-	public int addCart(CartDTO cart);
-	
-	/* 카트 삭제 */
-	public int deleteCart(int cartId);
-	
-	/* 카트 수량 수정 */
-	public int modifyCount(CartDTO cart);
-	
-	/* 카트 목록 */
-	public List<CartDTO> getCart(String memberId);	
-	
-	/* 카트 확인 */
-	public CartDTO checkCart(CartDTO cart);
+	public List<CartDTO> cartMoney();
+
+	public void insert(CartDTO cart);
+
+	public List<CartDTO> listCart(String m_num);
+
+	public void delete(int cartId);
+
+	public void deleteAll(String m_num);
+
+	public void update(int cartId);
+
+	public int sumMoney(String m_num);
+
+	public int countCart(String m_num, int GOODS_NO);
+
+	public void updateCart(CartDTO cart);
+
+	public void modifyCart(CartDTO cart);
+
+	public void setUserid(String m_num);
 }

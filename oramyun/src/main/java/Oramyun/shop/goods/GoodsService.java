@@ -6,7 +6,7 @@ public interface GoodsService {
 	
 	public void insertGoods(GoodsDTO goods);
 
-	public GoodsDTO getGoods(String GOODS_NO);
+	public GoodsDTO getGoods(String GOODS_NAME);
 	
 	public void goodsModifyPro(GoodsDTO goods);
 

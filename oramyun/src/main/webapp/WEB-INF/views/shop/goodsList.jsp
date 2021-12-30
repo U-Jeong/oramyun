@@ -74,8 +74,8 @@
                     </div>
                     <div class="text">
                         <h2>${goods.GOODS_NAME}</h2>
-                        <p>${goods.GOODS_CONTENT }</p>
-                        <button><i class="fas fa-check"></i> 사러가기</button>
+                        <p>${goods.GOODS_CONTENT}</p>
+                        <button onclick="location.href='${pageContext.request.contextPath}/product_details?GOODS_NAME=${goods.GOODS_NAME}'"><i class="fas fa-check"></i> 사러가기</button>
                     </div>
                 </div>
                 </c:forEach>

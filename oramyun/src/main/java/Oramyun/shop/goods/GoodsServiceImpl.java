@@ -22,9 +22,9 @@ public class GoodsServiceImpl implements GoodsService {
 	}
 
 	@Override
-	public GoodsDTO getGoods(String GOODS_NO) {
+	public GoodsDTO getGoods(String GOODS_NAME) {
 		System.out.println("GoodsServiceImpl.getGoods()");
-		return goodsDAO.getGoods(GOODS_NO);
+		return goodsDAO.getGoods(GOODS_NAME);
 	}
 
 	@Override

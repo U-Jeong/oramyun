@@ -41,9 +41,9 @@ public class GoodsDAO {
 		sqlSession.delete(namespace+".goodsDeletePro", goods);
 	}
 
-	public GoodsDTO getGoods(String GOODS_NO) {
+	public GoodsDTO getGoods(String GOODS_NAME) {
 		System.out.println("GoodsDAO.getGoods()");
-		return sqlSession.selectOne(namespace+".getGoods", GOODS_NO);
+		return sqlSession.selectOne(namespace+".getGoods", GOODS_NAME);
 	}
 
 

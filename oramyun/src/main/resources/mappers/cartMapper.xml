@@ -4,35 +4,53 @@
  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
  
  <mapper namespace="com.itwillbs.mapper.CartMapper">
- 	<!-- 카트 추가 -->
-	<insert id="addCart">
-		insert into cart(member_num, GOODS_NO, GOODS_AMOUNT)
-		values(#{member_num}, #{GOODS_NO}, #{GOODS_AMOUNT}) 
-	</insert>
+ 
+ 	<select id="cartMoney" resultType="Oramyun.shop.cart.CartDTO">
+ 	
+ 	</select>	
 	
-	<!-- 카트 삭제 -->
-	<delete id="deleteCart">
-		delete from cart where cartId = #{cartId}
-	</delete>
-	
-	<!-- 카트 수량 수정 -->
-	<update id="modifyCount">
-		update cart set GOODS_AMOUNT=#{GOODS_AMOUNT} where cartId = #{cartId}
+	<!-- 장바구니 담기 --> 	
+ 	<insert id="insert">
+        insert into cart (cartId, m_num, GOODS_NO, amount)
+        values (#{cartId}, #{m_num}, #{GOODS_NO}, #{amount} )
+    </insert>
+    
+    <!-- 장바구니 조회하기 -->
+    <select id="listCart" resultType="Oramyun.shop.cart.CartDTO">
+    	select * from cart where m_num=#{m_num}
+    </select>
+    
+    <!-- 장바구니 비우기 -->
+    <delete id="delete">
+        delete from cart where m_num=#{m_num} and cartId=#{cartId}
+    </delete>
+    
+    <delete id="deleteAll">
+        delete from cart where m_num=#{m_num}
+    </delete>
+
+	<update id="update">
+		update cart set amount=#{amount} where cartId=#{cartId}
 	</update>
-	
-	
-	<!-- 카트 목록 -->
-	<select id="getCart" resultType="Oramyun.shop.cart.CartDTO">
-		select a.cartId, a.member_num, a.GOODS_NO, a.GOODS_AMOUNT, G.GOODS_NAME, G.GOODS_SELL_PRICE, G.GOODS_SALE_PRICE
-		from cart a 
-			 left outer join GOODS G on a.GOODS_NO = b.GOODS_NO
-		where member_num = #{member_num}	
-	</select>
-	
-	<!-- 카트 확인 -->
-	<select id="checkCart" resultType="Oramyun.shop.cart.CartDTO">
-		select * from cart 
-		where member_num = #{member_num} and GOODS_NO = #{GOODS_NO}
-	</select>
+
+    
+    <select id="sumMoney" resultType="int">
+        select nvl(sum(price*amount),0)
+        <!--금액과 상품갯수를 곱한값과 0을더해서 0이 나오는 것을 검색한다. -->
+        <!--그러니까 아무것도 담지 않았을때를 확인하는 것이다. -->
+        <!--빈값이 null이면 안되기 때문에 대체값으로 0이 출력되게끔 만들었다-->
+
+        from cart c, goods g
+        <!-- 장바구니 테이블과 상품 테이블로 부터 -->
+
+        where c.GOODS_NO=g.GOODS_NO and m_num=#{m_num}
+        <!--조건 : 장바구니테이블의 상품 id가 상품테이블의 상품 id와 같고, 요청하는 회원의 id와 같은 경우 -->
+
+    </select>
+    
+    
+    
+    
+
 	
  </mapper>

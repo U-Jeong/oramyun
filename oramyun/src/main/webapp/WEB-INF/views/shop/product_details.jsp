@@ -93,7 +93,7 @@
 
                             <h4 class="title"><a href="#">${goods.GOODS_NAME}</a></h4>
 
-                            <h4 class="price">${goods.GOODS_SELL_PRICE }</h4>
+                            <h4 class="price">${goods.GOODS_SELL_PRICE }원</h4>
 
                             <p class="available">Available: <span class="text-muted">In Stock</span></p>
 
@@ -123,10 +123,10 @@
                             <form class="cart clearfix mb-50 d-flex" method="post">
                                 <div class="quantity">
                                     <span class="qty-minus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty ) &amp;&amp; qty &gt; 1 ) effect.value--;return false;"><i class="fa fa-minus" aria-hidden="true"></i></span>
-                                    <input type="number" class="qty-text" id="qty" step="1" min="1" max="12" name="quantity" value="1">
+                                    <input type="number" class="qty-text" id="qty" step="1" min="1" max="${goods.GOODS_AMOUNT}" name="quantity" value="1">
                                     <span class="qty-plus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty )) effect.value++;return false;"><i class="fa fa-plus" aria-hidden="true"></i></span>
                                 </div>
-                                <button type="submit" name="addtocart" value="5" class="btn cart-submit d-block">Add to cart</button>
+                                <button type="submit" name="addtocart" id="addtocart" value="5" class="btn cart-submit d-block">Add to cart</button>
                             </form>
 
                             <div id="accordion" role="tablist">
@@ -139,10 +139,10 @@
 
                                     <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
                                         <div class="card-body">
-                                        	<p>${goods.GOODS_CONTENT }</p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra tempor so dales. Phasellus sagittis auctor gravida. Integ er bibendum sodales arcu id te mpus. Ut consectetur lacus.</p>
-                                            <p>Approx length 66cm/26" (Based on a UK size 8 sample) Mixed fibres</p>
-                                            <p>The Model wears a UK size 8/ EU size 36/ US size 4 and her height is 5'8"</p>
+                                        	<p>${goods.GOODS_CONTENT}</p>
+<!--                                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra tempor so dales. Phasellus sagittis auctor gravida. Integ er bibendum sodales arcu id te mpus. Ut consectetur lacus.</p> -->
+<!--                                             <p>Approx length 66cm/26" (Based on a UK size 8 sample) Mixed fibres</p> -->
+<!--                                             <p>The Model wears a UK size 8/ EU size 36/ US size 4 and her height is 5'8"</p> -->
                                         </div>
                                     </div>
                                 </div>
@@ -168,13 +168,13 @@
                                     </div>
                                     <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
                                         <div class="card-body">
-                                        	<p>${goods.GOODS_CONTENT }</p>
+                                        	<p>${goods.GOODS_CONTENT}</p>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse quo sint repudiandae suscipit ab soluta delectus voluptate, vero vitae, tempore maxime rerum iste dolorem mollitia perferendis distinctio. Quibusdam laboriosam rerum distinctio. Repudiandae fugit odit, sequi id!</p>
                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae qui maxime consequatur laudantium temporibus ad et. A optio inventore deleniti ipsa.</p>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div
 
                         </div>
                     </div>
@@ -182,5 +182,19 @@
             </div>
         </section>
         <!-- <<<<<<<<<<<<<<<<<<<< Single Product Details Area End >>>>>>>>>>>>>>>>>>>>>>>>> -->
+        
+
+<script src="${pageContext.request.contextPath}/resources/script/jquery-3.6.0.js"></script>
+<script type="text/javascript">
+$('.addtocart').click(function(){
+		 alert("장바구니")
+		  var pop = win.open("about:blank","content","width=300,height=300");
+		  $.ajax({
+		      success:function(data){
+		         pop.location.href="";
+		     }
+		  });
+		});
+</script>
 </body>
 </html>

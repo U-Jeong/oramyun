@@ -1,28 +1,15 @@
 package Oramyun.shop.cart;
 
 public class CartDTO {
-		/* create table cart(
-    			cartId int primary key auto_increment,
-    			member_num int,
-    			GOODS_NO int,
-    			GOODS_AMOUNT int,
-    			foreign key member_num references member(member_num),
-    			foreign key GOODS_NO references GOODS(GOODS_NO)
-			);
-		 */
 	
 	private int cartId;
-	private int member_num;
+	private int m_num;
 	private int GOODS_NO;
-	private int GOODS_AMOUNT;
+	private int amount;
 	
-	// GOODS
 	private String GOODS_NAME;
 	private int GOODS_SELL_PRICE;
-	private int GOODS_SALE_PRICE;
-	
-	private int salePrice;
-	private int totalPrice;
+	private int price;
 	
 	public int getCartId() {
 		return cartId;
@@ -30,23 +17,25 @@ public class CartDTO {
 	public void setCartId(int cartId) {
 		this.cartId = cartId;
 	}
-	public int getMember_num() {
-		return member_num;
+	public int getM_num() {
+		return m_num;
 	}
-	public void setMember_num(int member_num) {
-		this.member_num = member_num;
+	public void setM_num(int m_num) {
+		this.m_num = m_num;
 	}
+
 	public int getGOODS_NO() {
 		return GOODS_NO;
 	}
 	public void setGOODS_NO(int gOODS_NO) {
 		GOODS_NO = gOODS_NO;
 	}
-	public int getGOODS_AMOUNT() {
-		return GOODS_AMOUNT;
+	
+	public int getAmount() {
+		return amount;
 	}
-	public void setGOODS_AMOUNT(int gOODS_AMOUNT) {
-		GOODS_AMOUNT = gOODS_AMOUNT;
+	public void setAmount(int amount) {
+		this.amount = amount;
 	}
 	public String getGOODS_NAME() {
 		return GOODS_NAME;
@@ -60,30 +49,21 @@ public class CartDTO {
 	public void setGOODS_SELL_PRICE(int gOODS_SELL_PRICE) {
 		GOODS_SELL_PRICE = gOODS_SELL_PRICE;
 	}
-	public int getGOODS_SALE_PRICE() {
-		return GOODS_SALE_PRICE;
+	public int getPrice() {
+		return price;
 	}
-	public void setGOODS_SALE_PRICE(int gOODS_SALE_PRICE) {
-		GOODS_SALE_PRICE = gOODS_SALE_PRICE;
-	}
-	public int getSalePrice() {
-		return salePrice;
-	}
-	public int getTotalPrice() {
-		return totalPrice;
-	}
-	
-	public void initSaleTotal() {
-		this.salePrice = (int) (this.GOODS_SELL_PRICE * (1-this.GOODS_SALE_PRICE));
-		this.totalPrice = this.salePrice*this.GOODS_AMOUNT;
+	public void setPrice(int price) {
+		this.price = price;
 	}
 	
 	@Override
 	public String toString() {
-		return "CartVO [cartId=" + cartId + ", member_num=" + member_num + ", GOODS_NO=" + GOODS_NO
-				+ ", GOODS_ATT_AMOUNT=" + GOODS_AMOUNT + ", GOODS_NAME=" + GOODS_NAME + ", GOODS_SELL_PRICE=" + GOODS_SELL_PRICE + ", GOODS_SALE_PRICE="
-				+ GOODS_SALE_PRICE + ", salePrice=" + salePrice + ", totalPrice=" + totalPrice + "]";
+		return "CartDTO [cartId=" + cartId + ", m_num=" + m_num + ", GOODS_NO=" + GOODS_NO + ", amount=" + amount
+				+ ", GOODS_NAME=" + GOODS_NAME + ", GOODS_SELL_PRICE=" + GOODS_SELL_PRICE + ", price=" + price + "]";
 	}
+	
+	
+	
  
 		
 }

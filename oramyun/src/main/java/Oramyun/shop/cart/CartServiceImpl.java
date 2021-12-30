@@ -1,8 +1,6 @@
 package Oramyun.shop.cart;
 
-import java.sql.Timestamp;
 import java.util.List;
-import java.util.Map;
 
 import javax.inject.Inject;
 
@@ -14,52 +12,57 @@ public class CartServiceImpl implements CartService {
 	@Inject
 	private CartDAO cartDAO;
 
-	@Override
-	public int addCart(CartDTO cart) {
-		// 장바구니 데이터 체크
-				CartDTO checkCart = cartDAO.checkCart(cart);
-				
-				if(checkCart != null) {
-					return 2;
-				}
-				
-				// 장바구니 등록 & 에러 시 0반환
-				try {
-					return cartDAO.addCart(cart);
-				} catch (Exception e) {
-					return 0;
-				}
-		 
-	}
-
-	@Override
-	public int deleteCart(int cartId) {
-		cartId = 1;
-		cartDAO.deleteCart(cartId);
-		return 0;
-	}
-
-	@Override
-	public int modifyCount(CartDTO cart) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public List<CartDTO> getCart(String memberId) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public CartDTO checkCart(CartDTO cart) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	
-
-
-
-
-	
+	 @Override
+	    public List<CartDTO> cartMoney() {
+	        return null;
+	    }
+	    @Override
+	    public void insert(CartDTO cart) {
+	        cartDAO.insert(cart);
+	    }
+	 
+	    @Override
+	    public List<CartDTO> listCart(String m_num) {
+	        return cartDAO.listCart(m_num);
+	    }
+	 
+	    @Override
+	    public void delete(int cartId) {
+	        cartDAO.delete(cartId);
+	    }
+	 
+	    @Override
+	    public void deleteAll(String m_num) {
+	        cartDAO.deleteAll(m_num);
+	    }
+	 
+	    @Override
+	    public void update(int cartId) {
+	    	cartDAO.update(cartId);
+	    }
+	 
+	    @Override
+	    public int sumMoney(String m_num) {
+	        return cartDAO.sumMoney(m_num);
+	    }
+	 
+	    @Override
+	    public int countCart(String m_num, int GOODS_NO) {
+	        return cartDAO.countCart(m_num, GOODS_NO);
+	    }
+	 
+	    @Override
+	    public void updateCart(CartDTO cart) {
+	    	cartDAO.updateCart(cart);
+	    }
+	 
+	    @Override
+	    public void modifyCart(CartDTO cart) {
+	        cartDAO.modifyCart(cart);
+	    }
+		@Override
+		public void setUserid(String m_num) {
+			cartDAO.setUserid(m_num);
+		}
+	 
 }

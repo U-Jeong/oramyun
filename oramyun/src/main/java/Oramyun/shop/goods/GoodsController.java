@@ -3,6 +3,7 @@ package Oramyun.shop.goods;
 import java.util.List;
 
 import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
@@ -47,16 +48,12 @@ public class GoodsController {
 		return "main/shop";
 	}
 	
-//	@RequestMapping(value = "/product_details", method = RequestMethod.GET)
-//	public String product_details() {
-//		System.out.println("GoodsController.product_details()");
-//		return "shop/product_details";
-//	}
-	
-	@RequestMapping(value = "/product_details/{GOODS_NO}", method = RequestMethod.GET)
-	public String product_details(@PathVariable("GOODS_NO")String GOODS_NO, Model model) {
+	@RequestMapping(value = "/product_details", method = RequestMethod.GET)
+	public String product_details(HttpServletRequest request, Model model) {
 		System.out.println("GoodsController.product_details()");
-		model.addAttribute("goods_details", goodsService.getGoods(GOODS_NO));
+		String GOODS_NAME = request.getParameter("GOODS_NAME");
+		GoodsDTO goods = goodsService.getGoods(GOODS_NAME);
+		model.addAttribute("goods", goods);
 		return "shop/product_details";
 	}
 	
