@@ -10,28 +10,46 @@
  	</select>	
 	
 	<!-- 장바구니 담기 --> 	
- 	<insert id="insert">
-        insert into cart (cartId, m_num, GOODS_NO, amount)
-        values (#{cartId}, #{m_num}, #{GOODS_NO}, #{amount} )
+ 	<insert id="addCart">
+        insert into cart (cartId, m_num, gdsName, amount)
+        values (#{cartId}, #{m_num}, #{gdsName}, #{amount} )
     </insert>
     
     <!-- 장바구니 조회하기 -->
-    <select id="listCart" resultType="Oramyun.shop.cart.CartDTO">
-    	select * from cart where m_num=#{m_num}
-    </select>
+<!--     <select id="listCart" resultType="Oramyun.shop.cart.CartListVO"> -->
+<!--     	select * from cart where m_num=#{m_num} -->
+<!--     </select> -->
+
+
+	<select id="listCart" resultType="Oramyun.shop.cart.CartListVO">
+		select cartNum, m_num, gdsNum, cartStock, addDate 
+		from member m, cartlist c, GOODS g
+		where m.member_email=#{member_email}
+		and c.gdsNum = g.GOODS_NO;
+	</select>
+	
+	<update id="gdsInfoUpdate">
+		update cartlist c
+		set gdsName = ( select goods_name
+						from goods
+						where goods_no = c.gdsNo ),
+			gdsPrice = ( select goods_sell_price from goods where goods_no = c.gdsNo )
+		where c.cartNum=#{cartNum}
+	</update>
     
     <!-- 장바구니 비우기 -->
-    <delete id="delete">
+    <delete id="deleteCart">
         delete from cart where m_num=#{m_num} and cartId=#{cartId}
     </delete>
     
-    <delete id="deleteAll">
+    <delete id="cartAllDelete">
         delete from cart where m_num=#{m_num}
     </delete>
 
 	<update id="update">
 		update cart set amount=#{amount} where cartId=#{cartId}
 	</update>
+
 
     
     <select id="sumMoney" resultType="int">

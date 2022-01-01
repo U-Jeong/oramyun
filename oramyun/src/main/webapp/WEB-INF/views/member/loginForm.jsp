@@ -81,7 +81,7 @@ ul, li {list-style:none; float: left; margin-left: 20px; }
 <input type="password" class="member_pass" id="member_pass" name="member_pass" placeholder=" 비밀번호" style="width:280px; height: 30px; margin: 10px auto;">
 </label>
 <label class="legend">
-<button type="button" class="sign-btn email" ><div class="icon email"><span>로그인</span></div></button>
+<button type="submit" class="sign-btn email" ><div class="icon email"><span>로그인</span></div></button>
 </label>
 <ul class="sign-in_info">
 	<li><a href="#n" title="이메일 찾기" class="btn find_ma" onclick="javascript:move('find_email');">이메일 찾기</a></li>

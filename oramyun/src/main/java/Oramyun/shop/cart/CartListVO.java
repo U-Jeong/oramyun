@@ -1,6 +1,6 @@
 package Oramyun.shop.cart;
 
-public class CartDTO {
+public class CartListVO {
 	
 	private int cartId;
 	private int m_num;

@@ -139,8 +139,7 @@
                                             </li>
                                             <li class="total">
                                                 <span class="pull-right">Total: $20.00 ${cart.totalPrice }</span>
-<%--                                                 <a href="${pageContext.request.contextPath }/cart/${member.member_num}" class="btn btn-sm btn-cart">Cart</a> --%>
-                                                <a href="${pageContext.request.contextPath }/getCartList" class="btn btn-sm btn-cart">Cart</a>
+                                                <a href="${pageContext.request.contextPath }/getCartList?member_email=${sessionScope.member_email}" class="btn btn-sm btn-cart">Cart</a>
                                                 <a href="${pageContext.request.contextPath }/order" class="btn btn-sm btn-checkout">Order</a>
                                             </li>
                                         </ul>
@@ -162,12 +161,12 @@
                     <div class="row h-100">
                         <div class="col-12 d-md-flex justify-content-between">
                             <!-- Header Social Area -->
-                            <div class="header-social-area">
-                                <a href="#"><span class="karl-level">Share</span> <i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                            </div>
+<!--                             <div class="header-social-area"> -->
+<!--                                 <a href="#"><span class="karl-level">Share</span> <i class="fa fa-pinterest" aria-hidden="true"></i></a> -->
+<!--                                 <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> -->
+<!--                                 <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a> -->
+<!--                                 <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a> -->
+<!--                             </div> -->
                             <!-- Menu Area -->
                             <div class="main-menu-area">
                                 <nav class="navbar navbar-expand-lg align-items-start">
@@ -208,23 +207,13 @@
                                 <a href="tel:+346573556778"><i class="ti-headphone-alt"></i> +34 657 3556 778</a>
                             </div>
                         </div>
-                            <!-- 관리자(admin)메뉴 위치 -->    
-							<c:if test="${sessionScope.member_email == 'admin@oramyun.com' }">
-                            <div class="admin-menu" style="float:right; padding:0px 0px 0px 100px; text-align:center;">
-                               <table border="3px">
-                               <label><b>::관리자 전용 메뉴::</b></label>
-                               <tr><td><a href="${pageContext.request.contextPath }/shop/write.do" id="write">상품등록</a></td>
-         							<td><a href="${pageContext.request.contextPath }/shop/goodsModify" id="update">상품수정</a></td>
-        	 						<td><a href="${pageContext.request.contextPath }/shop/goodsDelete" id="delete">상품삭제</a></td></tr>
-                            </table>
-                            </div>
-							</c:if>
                     </div>
                 </div>
             </div>
         </header>
         <!-- ****** Header Area End ****** -->
 
+        <!-- ****** Top Discount Area Start ****** -->
         <section class="top-discount-area d-md-flex align-items-center">
             <!-- 정기구독혜택 Area -->
             <div class="single-discount-area">
@@ -894,7 +883,7 @@
                     <div class="col-12 col-md-6 col-lg-3">
                         <div class="single_footer_area">
                             <div class="footer-logo">
-                                <img src="./resources/img/characteroram.png" alt="">
+<!--                                 <img src="./resources/img/characteroram.png" alt=""> -->
                             </div>
                             <div class="copywrite_text d-flex align-items-center">
                                 <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
