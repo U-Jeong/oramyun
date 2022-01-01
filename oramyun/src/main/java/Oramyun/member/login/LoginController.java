@@ -29,7 +29,7 @@ public class LoginController {
 
 	@RequestMapping(value = "/loginForm", method = RequestMethod.GET)
 	public String loginForm() {
-		System.out.println("LoginController.login()");
+		System.out.println("LoginController.loginForm()");
 		return "member/loginForm";
 	}
 

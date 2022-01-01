@@ -11,10 +11,10 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title  -->
-    <title>오라면 - 국내 최고 라면전문 쇼핑몰|</title>
+    <title>Karl - Fashion Ecommerce Template | Home</title>
 
     <!-- Favicon  -->
-    <link rel="icon" href="./resources/img/oramylogo.ico">
+    <link rel="icon" href="./resources/page/img/core-img/favicon.ico">
 
     <!-- Core Style CSS -->
     <link rel="stylesheet" href="./resources/page/css/core-style.css">
@@ -110,13 +110,13 @@
                             <div class="top_single_area d-flex align-items-center">
                                 <!-- Logo Area -->
                                 <div class="top_logo">
-                                    <a href="#"><img src="./resources/img/characteroram.png" alt=""></a>
+                                    <a href="#"><img src="./resources/page/img/core-img/logo.png" alt=""></a>
                                 </div>
                                 <!-- Cart & Menu Area -->
                                 <div class="header-cart-menu d-flex align-items-center ml-auto">
                                     <!-- Cart Area -->
                                     <div class="cart">
-                                        <a href="#" id="header-cart-btn" target="_blank"><span class="cart_quantity">2</span> <i class="ti-bag"></i> 장바구니 ${cart.totalPrice }</a>
+                                        <a href="#" id="header-cart-btn" target="_blank"><span class="cart_quantity">2</span> <i class="ti-bag"></i> Your Bag ${cart.totalPrice }</a>
                                         <!-- Cart List Area Start -->
                                         <ul class="cart-list">
                                             <li>
@@ -139,8 +139,8 @@
                                             </li>
                                             <li class="total">
                                                 <span class="pull-right">Total: $20.00 ${cart.totalPrice }</span>
-<%--                                                 <a href="${pageContext.request.contextPath }/cart/${member.member_num}" class="btn btn-sm btn-cart">Cart</a> --%>
-                                                <a href="${pageContext.request.contextPath }/getCartList" class="btn btn-sm btn-cart">Cart</a>
+                                                <!-- 회원 장바구니 어케 감? -->
+                                                <a href="${pageContext.request.contextPath }/cart.member_num=?${member.member_num}" class="btn btn-sm btn-cart">Cart</a>
                                                 <a href="${pageContext.request.contextPath }/order" class="btn btn-sm btn-checkout">Order</a>
                                             </li>
                                         </ul>
@@ -176,27 +176,27 @@
 
                                     <div class="collapse navbar-collapse align-items-start collapse" id="karl-navbar">
                                         <ul class="navbar-nav animated" id="nav">
-                                            <li class="nav-item active"><a class="nav-link" href="${pageContext.request.contextPath }/">홈으로</a></li>
+                                            <li class="nav-item active"><a class="nav-link" href="${pageContext.request.contextPath }/">Home</a></li>
                                             <li class="nav-item dropdown">
-                                                <a class="nav-link dropdown-toggle" href="#" id="karlDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">페이지</a>
+                                                <a class="nav-link dropdown-toggle" href="#" id="karlDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
                                                 <div class="dropdown-menu" aria-labelledby="karlDropdown">
-                                                		<a class="dropdown-item" href="${pageContext.request.contextPath }/shop">제품 보러가기</a>
-                                                        <a class="dropdown-item" href="${pageContext.request.contextPath }/product-details">상품 세부 정보</a>
-                                                        <a class="dropdown-item" href="${pageContext.request.contextPath }/event">이벤트</a>
-                                                        <a class="dropdown-item" href="${pageContext.request.contextPath }/racipe">우수 라시피</a>
-                                                    	<a class="dropdown-item" href="${pageContext.request.contextPath }/notice">공지사항</a>
+                                                		<a class="dropdown-item" href="${pageContext.request.contextPath }/shop">Shop</a>
+                                                        <a class="dropdown-item" href="${pageContext.request.contextPath }/product-details">Product Details</a>
+                                                        <a class="dropdown-item" href="${pageContext.request.contextPath }/event">event</a>
+                                                        <a class="dropdown-item" href="${pageContext.request.contextPath }/racipe">Best Racipe</a>
+                                                    	<a class="dropdown-item" href="${pageContext.request.contextPath }/notice">Notice</a>
 	                                                    <a class="dropdown-item" href="${pageContext.request.contextPath }/FAQ">FAQ</a>
                                                 </div>
                                             </li>
-                                            <li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/review"><span class="karl-level">핫한</span> 리뷰</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/review"><span class="karl-level">hot</span> Review</a></li>
 											<c:choose>
 												<c:when test="${empty sessionScope.member_email }">
-											<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/login">로그인</a></li>
-                                            <li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/join">회원가입</a></li>
+											<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/login">Login</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/join">Join</a></li>
 												</c:when>
 												<c:otherwise>
-											<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/logout">로그아웃</a></li>
-                                            <li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/join">회원가입</a></li>
+											<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/logout">Logout</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/join">Join</a></li>
 												</c:otherwise>
 											</c:choose>
                                         </ul>
@@ -208,38 +208,28 @@
                                 <a href="tel:+346573556778"><i class="ti-headphone-alt"></i> +34 657 3556 778</a>
                             </div>
                         </div>
-                            <!-- 관리자(admin)메뉴 위치 -->    
-							<c:if test="${sessionScope.member_email == 'admin@oramyun.com' }">
-                            <div class="admin-menu" style="float:right; padding:0px 0px 0px 100px; text-align:center;">
-                               <table border="3px">
-                               <label><b>::관리자 전용 메뉴::</b></label>
-                               <tr><td><a href="${pageContext.request.contextPath }/shop/write.do" id="write">상품등록</a></td>
-         							<td><a href="${pageContext.request.contextPath }/shop/goodsModify" id="update">상품수정</a></td>
-        	 						<td><a href="${pageContext.request.contextPath }/shop/goodsDelete" id="delete">상품삭제</a></td></tr>
-                            </table>
-                            </div>
-							</c:if>
                     </div>
                 </div>
             </div>
         </header>
         <!-- ****** Header Area End ****** -->
 
+        <!-- ****** Top Discount Area Start ****** -->
         <section class="top-discount-area d-md-flex align-items-center">
-            <!-- 정기구독혜택 Area -->
+            <!-- Single Discount Area -->
             <div class="single-discount-area">
-                <h5>정기구독 &amp; 매 5번째 주문 시 무료배송!</h5>
-                <h6><a href="#">라면 정기구독하기</a></h6>
+                <h5>Free Shipping &amp; Returns</h5>
+                <h6><a href="#">BUY NOW</a></h6>
             </div>
-            <!-- 첫 회원혜택 Area -->
+            <!-- Single Discount Area -->
             <div class="single-discount-area">
-                <h5>회원가입 후 첫 주문은 최대 20% 할인!</h5>
-                <h6>가입축하 코드: 라면JOA</h6>
+                <h5>20% Discount for all dresses</h5>
+                <h6>USE CODE: Colorlib</h6>
             </div>
-            <!-- 추천인 혜택 Area -->
+            <!-- Single Discount Area -->
             <div class="single-discount-area">
-                <h5>추천인 등록되면 친구와 20% 동반할인!</h5>
-                <h6>날 추천해준 친구가 5명 이상이면 추가 혜택이!</h6>
+                <h5>20% Discount for students</h5>
+                <h6>USE CODE: Colorlib</h6>
             </div>
         </section>
         <!-- ****** Top Discount Area End ****** -->
@@ -248,14 +238,14 @@
         <section class="welcome_area">
             <div class="welcome_slides owl-carousel">
                 <!-- Single Slide Start -->
-                <div class="single_slide height-800 bg-img background-overlay" style="background-image: url(./resources/img/quiz_ramyun.jpg);">
+                <div class="single_slide height-800 bg-img background-overlay" style="background-image: url(./resources/page/img/bg-img/bg-1.jpg);">
                     <div class="container h-100">
                         <div class="row h-100 align-items-center">
                             <div class="col-12">
                                 <div class="welcome_slide_text">
-                                    <h6 data-animation="bounceInDown" data-delay="0" data-duration="500ms">* 정답 시 포인트 3000점 적립!</h6>
-                                    <h2 data-animation="fadeInUp" data-delay="500ms" data-duration="500ms">라면을 맞춰라!</h2>
-                                    <a href="#" class="btn karl-btn" data-animation="fadeInUp" data-delay="1s" data-duration="500ms">맞추러 가기</a>
+                                    <h6 data-animation="bounceInDown" data-delay="0" data-duration="500ms">* Only today we offer free shipping</h6>
+                                    <h2 data-animation="fadeInUp" data-delay="500ms" data-duration="500ms">Fashion Trends</h2>
+                                    <a href="#" class="btn karl-btn" data-animation="fadeInUp" data-delay="1s" data-duration="500ms">Shop Now</a>
                                 </div>
                             </div>
                         </div>
@@ -263,14 +253,14 @@
                 </div>
 
                 <!-- Single Slide Start -->
-                <div class="single_slide height-800 bg-img background-overlay" style="background-image: url(./resources/img/ramyun_vs.jpg);">
+                <div class="single_slide height-800 bg-img background-overlay" style="background-image: url(./resources/page/img/bg-img/bg-4.jpg);">
                     <div class="container h-100">
                         <div class="row h-100 align-items-center">
                             <div class="col-12">
                                 <div class="welcome_slide_text">
-                                    <h6 data-animation="fadeInDown" data-delay="0" data-duration="500ms">*투표한 라면 우승 시 10개 무료 증정</h6>
-                                    <h2 data-animation="fadeInUp" data-delay="500ms" data-duration="500ms">통통라면 대결</h2>
-                                    <a href="#" class="btn karl-btn" data-animation="fadeInLeftBig" data-delay="1s" data-duration="500ms">투표하러 가기</a>
+                                    <h6 data-animation="fadeInDown" data-delay="0" data-duration="500ms">* Only today we offer free shipping</h6>
+                                    <h2 data-animation="fadeInUp" data-delay="500ms" data-duration="500ms">Summer Collection</h2>
+                                    <a href="#" class="btn karl-btn" data-animation="fadeInLeftBig" data-delay="1s" data-duration="500ms">Check Collection</a>
                                 </div>
                             </div>
                         </div>
@@ -278,14 +268,14 @@
                 </div>
 
                 <!-- Single Slide Start -->
-                <div class="single_slide height-800 bg-img background-overlay" style="background-image: url(./resources/img/rani_toon.jpg);">
+                <div class="single_slide height-800 bg-img background-overlay" style="background-image: url(./resources/page/img/bg-img/bg-2.jpg);">
                     <div class="container h-100">
                         <div class="row h-100 align-items-center">
                             <div class="col-12">
                                 <div class="welcome_slide_text">
-                                    <h6 data-animation="fadeInDown" data-delay="0" data-duration="500ms">* 양은냄비로 만들면 3배 맛있다!</h6>
-                                    <h2 data-animation="bounceInDown" data-delay="500ms" data-duration="500ms">양은냄비 특화 라시피 공개!</h2>
-                                    <a href="#" class="btn karl-btn" data-animation="fadeInRightBig" data-delay="1s" data-duration="500ms">라시피 보러 가기</a>
+                                    <h6 data-animation="fadeInDown" data-delay="0" data-duration="500ms">* Only today we offer free shipping</h6>
+                                    <h2 data-animation="bounceInDown" data-delay="500ms" data-duration="500ms">Women Fashion</h2>
+                                    <a href="#" class="btn karl-btn" data-animation="fadeInRightBig" data-delay="1s" data-duration="500ms">Check Collection</a>
                                 </div>
                             </div>
                         </div>
@@ -298,19 +288,19 @@
         <!-- ****** Top Catagory Area Start ****** -->
         <section class="top_catagory_area d-md-flex clearfix">
             <!-- Single Catagory -->
-            <div class="single_catagory_area d-flex align-items-center bg-img" style="background-image: url(./resources/img/best_racipes1.jpg);">
+            <div class="single_catagory_area d-flex align-items-center bg-img" style="background-image: url(./resources/page/img/bg-img/bg-2.jpg);">
                 <div class="catagory-content">
-                    <h6>나의 라시피는</h6>
-                    <h2>나만의 라시피 자랑대회</h2>
-                    <a href="#" class="btn karl-btn">라시피 뽐내러 가기</a>
+                    <h6>On Accesories</h6>
+                    <h2>Sale 30%</h2>
+                    <a href="#" class="btn karl-btn">SHOP NOW</a>
                 </div>
             </div>
             <!-- Single Catagory -->
-            <div class="single_catagory_area d-flex align-items-center bg-img" style="background-image: url(./resources/img/ramyun_labo.jpg);">
+            <div class="single_catagory_area d-flex align-items-center bg-img" style="background-image: url(./resources/page/img/bg-img/bg-3.jpg);">
                 <div class="catagory-content">
-                    <h6>라면은 무조건 건강에 나쁘다?</h6>
-                    <h2>오라면의 라면분석 보고서</h2>
-                    <a href="#" class="btn karl-btn">라면 심층분석 들여다보기</a>
+                    <h6>in Bags excepting the new collection</h6>
+                    <h2>Designer bags</h2>
+                    <a href="#" class="btn karl-btn">SHOP NOW</a>
                 </div>
             </div>
         </section>
@@ -347,7 +337,7 @@
                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia expedita quibusdam aspernatur, sapiente consectetur accusantium perspiciatis praesentium eligendi, in fugiat?</p>
                                             <a href="#">View Full Product Details</a>
                                         </div>
-                                        <!-- 장바구니에 담기 Form -->
+                                        <!-- Add to Cart Form -->
                                         <form class="cart" method="post">
                                             <div class="quantity">
                                                 <span class="qty-minus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty ) &amp;&amp; qty &gt; 1 ) effect.value--;return false;"><i class="fa fa-minus" aria-hidden="true"></i></span>
@@ -356,7 +346,7 @@
 
                                                 <span class="qty-plus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty )) effect.value++;return false;"><i class="fa fa-plus" aria-hidden="true"></i></span>
                                             </div>
-                                            <button type="submit" name="addtocart" value="5" class="cart-submit">장바구니에 담기</button>
+                                            <button type="submit" name="addtocart" value="5" class="cart-submit">Add to cart</button>
                                             <!-- Wishlist -->
                                             <div class="modal_pro_wishlist">
                                                 <a href="wishlist.html" target="_blank"><i class="ti-heart"></i></a>
@@ -392,7 +382,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="section_heading text-center">
-                            <h2>상품 목록</h2>
+                            <h2>New Arrivals</h2>
                         </div>
                     </div>
                 </div>
@@ -416,7 +406,7 @@
                     <div class="col-12 col-sm-6 col-md-4 single_gallery_item women wow fadeInUpBig" data-wow-delay="0.2s">
                         <!-- Product Image -->
                         <div class="product-img">
-                            <img src="./resources/img/1.png" alt="">
+                            <img src="./resources/page/img/product-img/product-1.jpg" alt="">
                             <div class="product-quicview">
                                 <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
                             </div>
@@ -424,9 +414,9 @@
                         <!-- Product Description -->
                         <div class="product-description">
                             <h4 class="product-price">$39.90 ${goods.GOODS_SELL_PRICE }</h4>
-                            <p>평범한 수준을 한참 뛰어넘은 맵디 매운 라면 ${goods.GOODS_NAME }</p>
-                            <!-- 장바구니에 담기 -->
-                            <a href="#" class="add-to-cart-btn">장바구니에 담기</a>
+                            <p>Jeans midi cocktail dress ${goods.GOODS_NAME }</p>
+                            <!-- Add to Cart -->
+                            <a href="#" class="add-to-cart-btn">ADD TO CART</a>
                         </div>
                     </div>
 
@@ -434,7 +424,7 @@
                     <div class="col-12 col-sm-6 col-md-4 single_gallery_item women wow fadeInUpBig" data-wow-delay="0.3s">
                         <!-- Product Image -->
                         <div class="product-img">
-                            <img src="./resources/img/2.png" alt="">
+                            <img src="./resources/page/img/product-img/product-2.jpg" alt="">
                             <div class="product-quicview">
                                 <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
                             </div>
@@ -443,8 +433,8 @@
                         <div class="product-description">
                             <h4 class="product-price">$39.90</h4>
                             <p>Jeans midi cocktail dress</p>
-                            <!-- 장바구니에 담기 -->
-                            <a href="#" class="add-to-cart-btn">장바구니에 담기</a>
+                            <!-- Add to Cart -->
+                            <a href="#" class="add-to-cart-btn">ADD TO CART</a>
                         </div>
                     </div>
 
@@ -452,7 +442,7 @@
                     <div class="col-12 col-sm-6 col-md-4 single_gallery_item access wow fadeInUpBig" data-wow-delay="0.4s">
                         <!-- Product Image -->
                         <div class="product-img">
-                            <img src="./resources/img/3.png" alt="">
+                            <img src="./resources/page/img/product-img/product-3.jpg" alt="">
                             <div class="product-quicview">
                                 <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
                             </div>
@@ -461,8 +451,8 @@
                         <div class="product-description">
                             <h4 class="product-price">$39.90</h4>
                             <p>Jeans midi cocktail dress</p>
-                            <!-- 장바구니에 담기 -->
-                            <a href="#" class="add-to-cart-btn">장바구니에 담기</a>
+                            <!-- Add to Cart -->
+                            <a href="#" class="add-to-cart-btn">ADD TO CART</a>
                         </div>
                     </div>
 
@@ -470,7 +460,7 @@
                     <div class="col-12 col-sm-6 col-md-4 single_gallery_item shoes wow fadeInUpBig" data-wow-delay="0.5s">
                         <!-- Product Image -->
                         <div class="product-img">
-                            <img src="./resources/img/4.png" alt="">
+                            <img src="./resources/page/img/product-img/product-4.jpg" alt="">
                             <div class="product-quicview">
                                 <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
                             </div>
@@ -479,8 +469,8 @@
                         <div class="product-description">
                             <h4 class="product-price">$39.90</h4>
                             <p>Jeans midi cocktail dress</p>
-                            <!-- 장바구니에 담기 -->
-                            <a href="#" class="add-to-cart-btn">장바구니에 담기</a>
+                            <!-- Add to Cart -->
+                            <a href="#" class="add-to-cart-btn">ADD TO CART</a>
                         </div>
                     </div>
 
@@ -488,7 +478,7 @@
                     <div class="col-12 col-sm-6 col-md-4 single_gallery_item women wow fadeInUpBig" data-wow-delay="0.6s">
                         <!-- Product Image -->
                         <div class="product-img">
-                            <img src="./resources/img/5.png" alt="">
+                            <img src="./resources/page/img/product-img/product-5.jpg" alt="">
                             <div class="product-quicview">
                                 <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
                             </div>
@@ -497,278 +487,8 @@
                         <div class="product-description">
                             <h4 class="product-price">$39.90</h4>
                             <p>Jeans midi cocktail dress</p>
-                            <!-- 장바구니에 담기 -->
-                            <a href="#" class="add-to-cart-btn">장바구니에 담기</a>
-                        </div>
-                    </div>
-                    
-                      <!-- Single gallery Item Start -->
-                    <div class="col-12 col-sm-6 col-md-4 single_gallery_item women wow fadeInUpBig" data-wow-delay="0.6s">
-                        <!-- Product Image -->
-                        <div class="product-img">
-                            <img src="./resources/img/6.png" alt="">
-                            <div class="product-quicview">
-                                <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
-                            </div>
-                        </div>
-                        <!-- Product Description -->
-                        <div class="product-description">
-                            <h4 class="product-price">$39.90</h4>
-                            <p>Jeans midi cocktail dress</p>
-                            <!-- 장바구니에 담기 -->
-                            <a href="#" class="add-to-cart-btn">장바구니에 담기</a>
-                        </div>
-                    </div>
-                    
-                      <!-- Single gallery Item Start -->
-                    <div class="col-12 col-sm-6 col-md-4 single_gallery_item women wow fadeInUpBig" data-wow-delay="0.6s">
-                        <!-- Product Image -->
-                        <div class="product-img">
-                            <img src="./resources/img/7.png" alt="">
-                            <div class="product-quicview">
-                                <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
-                            </div>
-                        </div>
-                        <!-- Product Description -->
-                        <div class="product-description">
-                            <h4 class="product-price">$39.90</h4>
-                            <p>Jeans midi cocktail dress</p>
-                            <!-- 장바구니에 담기 -->
-                            <a href="#" class="add-to-cart-btn">장바구니에 담기</a>
-                        </div>
-                    </div>
-                    
-                      <!-- Single gallery Item Start -->
-                    <div class="col-12 col-sm-6 col-md-4 single_gallery_item women wow fadeInUpBig" data-wow-delay="0.6s">
-                        <!-- Product Image -->
-                        <div class="product-img">
-                            <img src="./resources/img/8.png" alt="">
-                            <div class="product-quicview">
-                                <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
-                            </div>
-                        </div>
-                        <!-- Product Description -->
-                        <div class="product-description">
-                            <h4 class="product-price">$39.90</h4>
-                            <p>Jeans midi cocktail dress</p>
-                            <!-- 장바구니에 담기 -->
-                            <a href="#" class="add-to-cart-btn">장바구니에 담기</a>
-                        </div>
-                    </div>
-                    
-                      <!-- Single gallery Item Start -->
-                    <div class="col-12 col-sm-6 col-md-4 single_gallery_item women wow fadeInUpBig" data-wow-delay="0.6s">
-                        <!-- Product Image -->
-                        <div class="product-img">
-                            <img src="./resources/img/9.png" alt="">
-                            <div class="product-quicview">
-                                <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
-                            </div>
-                        </div>
-                        <!-- Product Description -->
-                        <div class="product-description">
-                            <h4 class="product-price">$39.90</h4>
-                            <p>Jeans midi cocktail dress</p>
-                            <!-- 장바구니에 담기 -->
-                            <a href="#" class="add-to-cart-btn">장바구니에 담기</a>
-                        </div>
-                    </div>
-                    
-                      <!-- Single gallery Item Start -->
-                    <div class="col-12 col-sm-6 col-md-4 single_gallery_item women wow fadeInUpBig" data-wow-delay="0.6s">
-                        <!-- Product Image -->
-                        <div class="product-img">
-                            <img src="./resources/img/10.png" alt="">
-                            <div class="product-quicview">
-                                <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
-                            </div>
-                        </div>
-                        <!-- Product Description -->
-                        <div class="product-description">
-                            <h4 class="product-price">$39.90</h4>
-                            <p>Jeans midi cocktail dress</p>
-                            <!-- 장바구니에 담기 -->
-                            <a href="#" class="add-to-cart-btn">장바구니에 담기</a>
-                        </div>
-                    </div>
-                    
-                      <!-- Single gallery Item Start -->
-                    <div class="col-12 col-sm-6 col-md-4 single_gallery_item women wow fadeInUpBig" data-wow-delay="0.6s">
-                        <!-- Product Image -->
-                        <div class="product-img">
-                            <img src="./resources/img/11.png" alt="">
-                            <div class="product-quicview">
-                                <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
-                            </div>
-                        </div>
-                        <!-- Product Description -->
-                        <div class="product-description">
-                            <h4 class="product-price">$39.90</h4>
-                            <p>Jeans midi cocktail dress</p>
-                            <!-- 장바구니에 담기 -->
-                            <a href="#" class="add-to-cart-btn">장바구니에 담기</a>
-                        </div>
-                    </div>
-                    
-                      <!-- Single gallery Item Start -->
-                    <div class="col-12 col-sm-6 col-md-4 single_gallery_item women wow fadeInUpBig" data-wow-delay="0.6s">
-                        <!-- Product Image -->
-                        <div class="product-img">
-                            <img src="./resources/img/12.png" alt="">
-                            <div class="product-quicview">
-                                <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
-                            </div>
-                        </div>
-                        <!-- Product Description -->
-                        <div class="product-description">
-                            <h4 class="product-price">$39.90</h4>
-                            <p>Jeans midi cocktail dress</p>
-                            <!-- 장바구니에 담기 -->
-                            <a href="#" class="add-to-cart-btn">장바구니에 담기</a>
-                        </div>
-                    </div>
-                    
-                      <!-- Single gallery Item Start -->
-                    <div class="col-12 col-sm-6 col-md-4 single_gallery_item women wow fadeInUpBig" data-wow-delay="0.6s">
-                        <!-- Product Image -->
-                        <div class="product-img">
-                            <img src="./resources/img/13.png" alt="">
-                            <div class="product-quicview">
-                                <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
-                            </div>
-                        </div>
-                        <!-- Product Description -->
-                        <div class="product-description">
-                            <h4 class="product-price">$39.90</h4>
-                            <p>Jeans midi cocktail dress</p>
-                            <!-- 장바구니에 담기 -->
-                            <a href="#" class="add-to-cart-btn">장바구니에 담기</a>
-                        </div>
-                    </div>
-                    
-                      <!-- Single gallery Item Start -->
-                    <div class="col-12 col-sm-6 col-md-4 single_gallery_item women wow fadeInUpBig" data-wow-delay="0.6s">
-                        <!-- Product Image -->
-                        <div class="product-img">
-                            <img src="./resources/img/14.png" alt="">
-                            <div class="product-quicview">
-                                <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
-                            </div>
-                        </div>
-                        <!-- Product Description -->
-                        <div class="product-description">
-                            <h4 class="product-price">$39.90</h4>
-                            <p>Jeans midi cocktail dress</p>
-                            <!-- 장바구니에 담기 -->
-                            <a href="#" class="add-to-cart-btn">장바구니에 담기</a>
-                        </div>
-                    </div>
-                    
-                      <!-- Single gallery Item Start -->
-                    <div class="col-12 col-sm-6 col-md-4 single_gallery_item women wow fadeInUpBig" data-wow-delay="0.6s">
-                        <!-- Product Image -->
-                        <div class="product-img">
-                            <img src="./resources/img/15.png" alt="">
-                            <div class="product-quicview">
-                                <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
-                            </div>
-                        </div>
-                        <!-- Product Description -->
-                        <div class="product-description">
-                            <h4 class="product-price">$39.90</h4>
-                            <p>Jeans midi cocktail dress</p>
-                            <!-- 장바구니에 담기 -->
-                            <a href="#" class="add-to-cart-btn">장바구니에 담기</a>
-                        </div>
-                    </div>
-                    
-                      <!-- Single gallery Item Start -->
-                    <div class="col-12 col-sm-6 col-md-4 single_gallery_item women wow fadeInUpBig" data-wow-delay="0.6s">
-                        <!-- Product Image -->
-                        <div class="product-img">
-                            <img src="./resources/img/16.png" alt="">
-                            <div class="product-quicview">
-                                <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
-                            </div>
-                        </div>
-                        <!-- Product Description -->
-                        <div class="product-description">
-                            <h4 class="product-price">$39.90</h4>
-                            <p>Jeans midi cocktail dress</p>
-                            <!-- 장바구니에 담기 -->
-                            <a href="#" class="add-to-cart-btn">장바구니에 담기</a>
-                        </div>
-                    </div>
-                    
-                      <!-- Single gallery Item Start -->
-                    <div class="col-12 col-sm-6 col-md-4 single_gallery_item women wow fadeInUpBig" data-wow-delay="0.6s">
-                        <!-- Product Image -->
-                        <div class="product-img">
-                            <img src="./resources/img/17.png" alt="">
-                            <div class="product-quicview">
-                                <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
-                            </div>
-                        </div>
-                        <!-- Product Description -->
-                        <div class="product-description">
-                            <h4 class="product-price">$39.90</h4>
-                            <p>Jeans midi cocktail dress</p>
-                            <!-- 장바구니에 담기 -->
-                            <a href="#" class="add-to-cart-btn">장바구니에 담기</a>
-                        </div>
-                    </div>
-                    
-                      <!-- Single gallery Item Start -->
-                    <div class="col-12 col-sm-6 col-md-4 single_gallery_item women wow fadeInUpBig" data-wow-delay="0.6s">
-                        <!-- Product Image -->
-                        <div class="product-img">
-                            <img src="./resources/img/18.png" alt="">
-                            <div class="product-quicview">
-                                <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
-                            </div>
-                        </div>
-                        <!-- Product Description -->
-                        <div class="product-description">
-                            <h4 class="product-price">$39.90</h4>
-                            <p>Jeans midi cocktail dress</p>
-                            <!-- 장바구니에 담기 -->
-                            <a href="#" class="add-to-cart-btn">장바구니에 담기</a>
-                        </div>
-                    </div>
-                    
-                      <!-- Single gallery Item Start -->
-                    <div class="col-12 col-sm-6 col-md-4 single_gallery_item women wow fadeInUpBig" data-wow-delay="0.6s">
-                        <!-- Product Image -->
-                        <div class="product-img">
-                            <img src="./resources/img/19.png" alt="">
-                            <div class="product-quicview">
-                                <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
-                            </div>
-                        </div>
-                        <!-- Product Description -->
-                        <div class="product-description">
-                            <h4 class="product-price">$39.90</h4>
-                            <p>Jeans midi cocktail dress</p>
-                            <!-- 장바구니에 담기 -->
-                            <a href="#" class="add-to-cart-btn">장바구니에 담기</a>
-                        </div>
-                    </div>
-                    
-                      <!-- Single gallery Item Start -->
-                    <div class="col-12 col-sm-6 col-md-4 single_gallery_item women wow fadeInUpBig" data-wow-delay="0.6s">
-                        <!-- Product Image -->
-                        <div class="product-img">
-                            <img src="./resources/img/20.png" alt="">
-                            <div class="product-quicview">
-                                <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
-                            </div>
-                        </div>
-                        <!-- Product Description -->
-                        <div class="product-description">
-                            <h4 class="product-price">$39.90</h4>
-                            <p>Jeans midi cocktail dress</p>
-                            <!-- 장바구니에 담기 -->
-                            <a href="#" class="add-to-cart-btn">장바구니에 담기</a>
+                            <!-- Add to Cart -->
+                            <a href="#" class="add-to-cart-btn">ADD TO CART</a>
                         </div>
                     </div>
 
@@ -776,7 +496,7 @@
                     <div class="col-12 col-sm-6 col-md-4 single_gallery_item kids man wow fadeInUpBig" data-wow-delay="0.7s">
                         <!-- Product Image -->
                         <div class="product-img">
-                            <img src="./resources/img/21.png" alt="">
+                            <img src="./resources/page/img/product-img/product-6.jpg" alt="">
                             <div class="product-quicview">
                                 <a href="#" data-toggle="modal" data-target="#quickview"><i class="ti-plus"></i></a>
                             </div>
@@ -785,29 +505,27 @@
                         <div class="product-description">
                             <h4 class="product-price">$39.90</h4>
                             <p>Jeans midi cocktail dress</p>
-                            <!-- 장바구니에 담기 -->
-                            <a href="#" class="add-to-cart-btn">장바구니에 담기</a>
+                            <!-- Add to Cart -->
+                            <a href="#" class="add-to-cart-btn">ADD TO CART</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- ****** 상품 목록 End ****** -->
+        <!-- ****** New Arrivals Area End ****** -->
 
         <!-- ****** Offer Area Start ****** -->
-        <section class="offer_area height-500 section_padding_100 bg-img" style="background-image: url(./resources/img/todays_ram.jpg);">
+        <section class="offer_area height-700 section_padding_100 bg-img" style="background-image: url(./resources/page/img/bg-img/bg-5.jpg);">
             <div class="container h-100">
                 <div class="row h-100 align-items-end justify-content-end">
                     <div class="col-12 col-md-8 col-lg-6">
                         <div class="offer-content-area wow fadeInUp" data-wow-delay="1s">
-                            <h2>로제 rose<br> <span class="karl-level">오늘의 라면!</span>
-                            불닭볶음면</h2>
-                            <p>* 출시 기념 할인 판매</p>
+                            <h2>White t-shirt <span class="karl-level">Hot</span></h2>
+                            <p>* Free shipping until 25 Dec 2017</p>
                             <div class="offer-product-price">
-                                
-                                <h4>1Box</h4><h3><span class="regular-price">30,000원</span> 15,000원</h3>
+                                <h3><span class="regular-price">$25.90</span> $15.90</h3>
                             </div>
-                            <a href="#" class="btn karl-btn mt-30">바로 주문하기</a>
+                            <a href="#" class="btn karl-btn mt-30">Shop Now</a>
                         </div>
                     </div>
                 </div>
@@ -821,7 +539,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="section_heading text-center">
-                            <h2>먹어본 라면 리뷰</h2>
+                            <h2>Testimonials</h2>
                         </div>
                     </div>
                 </div>
@@ -833,15 +551,14 @@
                             <!-- Single Testimonial Area -->
                             <div class="single-testimonial-area text-center">
                                 <span class="quote">"</span>
-                                <h6>원래 매운맛만 먹던 불닭매니아였지만, 요새는 파릇파릇한 야채라면이 땡겨서 이번엔
-		                            야채라면만 3박스 시켰습니다~! 친정이랑 언니네랑 같이 나눠먹으니 일주일만에 또 시켰네요~! </h6>
+                                <h6>Nunc pulvinar molestie sem id blandit. Nunc venenatis interdum mollis. Aliquam finibus nulla quam, a iaculis justo finibus non. Suspendisse in fermentum nunc.Nunc pulvinar molestie sem id blandit. Nunc venenatis interdum mollis. </h6>
                                 <div class="testimonial-info d-flex align-items-center justify-content-center">
                                     <div class="tes-thumbnail">
-                                        <img src="./resources/img/review1.jpeg" alt="">
+                                        <img src="./resources/page/img/bg-img/tes-1.jpg" alt="">
                                     </div>
                                     <div class="testi-data">
-                                        <p>맵찔이_kky2101</p>
-                                        <span>경기 파주시 개마고원동</span>
+                                        <p>Michelle Williams</p>
+                                        <span>Client, Los Angeles</span>
                                     </div>
                                 </div>
                             </div>
@@ -849,15 +566,14 @@
                             <!-- Single Testimonial Area -->
                             <div class="single-testimonial-area text-center">
                                 <span class="quote">"</span>
-                                <h6> 매달마다 10박스씩 주문했는데 이번엔 이벤트로 5박스가 더 와서 행복합니다!
-                                늘 먹던 라면이 날 추워지니 더 맛있어져서 큰일이에요. 우리 삥또가 저보다 라면을 더 반기네요. </h6>
+                                <h6>Nunc pulvinar molestie sem id blandit. Nunc venenatis interdum mollis. Aliquam finibus nulla quam, a iaculis justo finibus non. Suspendisse in fermentum nunc.Nunc pulvinar molestie sem id blandit. Nunc venenatis interdum mollis. </h6>
                                 <div class="testimonial-info d-flex align-items-center justify-content-center">
                                     <div class="tes-thumbnail">
-                                        <img src="./resources/img/review2.jpeg" alt="">
+                                        <img src="./resources/page/img/bg-img/tes-1.jpg" alt="">
                                     </div>
                                     <div class="testi-data">
-                                        <p>라면없인못살아_b13bbls</p>
-                                        <span>경주시 왕릉면 왕자동</span>
+                                        <p>Michelle Williams</p>
+                                        <span>Client, Los Angeles</span>
                                     </div>
                                 </div>
                             </div>
@@ -865,15 +581,14 @@
                             <!-- Single Testimonial Area -->
                             <div class="single-testimonial-area text-center">
                                 <span class="quote">"</span>
-                                <h6> 다음달부터 다이어트한다고 와이프랑 약속해서 이번 주문으로 원없이 라면 먹어보렵니다
-                                회사에서 주3일씩 야근하면서 하루에 6봉씩 먹습니다. 사랑합니다 오라면 </h6>
+                                <h6>Nunc pulvinar molestie sem id blandit. Nunc venenatis interdum mollis. Aliquam finibus nulla quam, a iaculis justo finibus non. Suspendisse in fermentum nunc.Nunc pulvinar molestie sem id blandit. Nunc venenatis interdum mollis. </h6>
                                 <div class="testimonial-info d-flex align-items-center justify-content-center">
                                     <div class="tes-thumbnail">
-                                        <img src="./resources/img/review3.jpeg" alt="">
+                                        <img src="./resources/page/img/bg-img/tes-1.jpg" alt="">
                                     </div>
                                     <div class="testi-data">
-                                        <p>면발김과장_kimtongtong3306</p>
-                                        <span>판교 밀레니얼 비즈니스센터 3층</span>
+                                        <p>Michelle Williams</p>
+                                        <span>Client, Los Angeles</span>
                                     </div>
                                 </div>
                             </div>
@@ -894,11 +609,11 @@
                     <div class="col-12 col-md-6 col-lg-3">
                         <div class="single_footer_area">
                             <div class="footer-logo">
-                                <img src="./resources/img/characteroram.png" alt="">
+                                <img src="./resources/page/img/core-img/logo.png" alt="">
                             </div>
                             <div class="copywrite_text d-flex align-items-center">
                                 <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">오라면조</a> &amp; distributed by <a href="https://themewagon.com" target="_blank">오라면팀</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> &amp; distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                             </div>
                         </div>
@@ -907,11 +622,11 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                     <div class="col-12 col-sm-6 col-md-3 col-lg-2">
                         <div class="single_footer_area">
                             <ul class="footer_widget_menu">
-                                <li><a href="#">오라면은?</a></li>
-                                <li><a href="#">오라면 블로그</a></li>
-                                <li><a href="#">자주 묻는 질문</a></li>
-                                <li><a href="#">환불문의</a></li>
-                                <li><a href="#">상담하기</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Faq</a></li>
+                                <li><a href="#">Returns</a></li>
+                                <li><a href="#">Contact</a></li>
                             </ul>
                         </div>
                     </div>
@@ -919,9 +634,10 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                     <div class="col-12 col-sm-6 col-md-3 col-lg-2">
                         <div class="single_footer_area">
                             <ul class="footer_widget_menu">
-                                <li><a href="#">나의 계정</a></li>
-                                <li><a href="#">배송현황조회</a></li>
-                                <li><a href="#">정책</a></li>
+                                <li><a href="#">My Account</a></li>
+                                <li><a href="#">Shipping</a></li>
+                                <li><a href="#">Our Policies</a></li>
+                                <li><a href="#">Afiliates</a></li>
                             </ul>
                         </div>
                     </div>
@@ -929,12 +645,12 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                     <div class="col-12 col-lg-5">
                         <div class="single_footer_area">
                             <div class="footer_heading mb-30">
-                                <h6>오라면의 할인/이벤트 혜택 소식 받아보기</h6>
+                                <h6>Subscribe to our newsletter</h6>
                             </div>
                             <div class="subscribtion_form">
                                 <form action="#" method="post">
                                     <input type="email" name="mail" class="mail" placeholder="Your email here">
-                                    <button type="submit" class="submit">소식지 구독</button>
+                                    <button type="submit" class="submit">Subscribe</button>
                                 </form>
                             </div>
                         </div>

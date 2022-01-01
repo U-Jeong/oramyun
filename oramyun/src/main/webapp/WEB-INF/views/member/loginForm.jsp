@@ -67,11 +67,10 @@ a:hover,a:hover *,a.visited:hover {text-decoration:none;}
 /* list */
 ul, li {list-style:none; float: left; margin-left: 20px; }
 </style>
-
 </head>
 <body>
 <br><br>
-<form id="login-form" action="${pageContext.request.contextPath}/loginPro"  method="post" >
+<form id="login-form" action="${pageContext.request.contextPath}/loginPro" method="post">
 <h1>오늘도 반갑습니다!</h1>
 <h3>로그인 및 회원가입</h3>
 <br><hr>
@@ -82,14 +81,14 @@ ul, li {list-style:none; float: left; margin-left: 20px; }
 <input type="password" class="member_pass" id="member_pass" name="member_pass" placeholder=" 비밀번호" style="width:280px; height: 30px; margin: 10px auto;">
 </label>
 <label class="legend">
-<input type="submit" class="sign-btn email" ><div class="icon email"><span>로그인</span></div>
+<button type="button" class="sign-btn email" ><div class="icon email"><span>로그인</span></div></button>
 </label>
 <ul class="sign-in_info">
 	<li><a href="#n" title="이메일 찾기" class="btn find_ma" onclick="javascript:move('find_email');">이메일 찾기</a></li>
 	<li><a href="#n" title="비밀번호 찾기" class="btn find_pw" onclick="javascript:move('find_pw');">비밀번호 찾기</a></li>
 	<li><a href="${pageContext.request.contextPath}/join" title="회원가입" class="btn sign">회원가입</a></li>
 </ul>
-<div id="blank"></div>
+<div name="blank" id="blank"></div>
 </form>
 </body>
 </html>

@@ -53,7 +53,7 @@ button {
 <!-- header -->
 <%-- <jsp:include page="/WEB-INF/views/inc/header_o.jsp"></jsp:include> --%>
 <!--// page start -->
-<form id="login-form" method="post">
+<form id="login-form" method="get">
 <h1>오늘도 반갑습니다!</h1>
 <h3>로그인 및 회원가입</h3>
 <br><hr>
